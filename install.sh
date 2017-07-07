@@ -7,6 +7,11 @@
 # Emacs and Spacemacs.
 #
 
+# Requirements
+sudo npm install -g tern js-beautify eslint jshint typescript tslint typescript-formatter
+sudo pip install autoflake hy
+
+# Installation
 rm -rf ~/.emacs.d
 rm -rf ~/.spacemacs
 ln -s ~/Projects/system/spacemacs/spacemacs ~/.spacemacs
