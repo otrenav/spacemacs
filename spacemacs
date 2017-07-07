@@ -1,6 +1,4 @@
 ;; -*- mode: emacs-lisp -*-
-;; This file is loaded by Spacemacs at startup.
-;; It must be stored in your home directory.
 
 (defun dotspacemacs/layers ()
   "Configuration Layers declaration.
@@ -32,10 +30,10 @@ values."
       :variables
       version-control-diff-tool 'diff-hl    ;; TODO: Compare to git-gutter
       version-control-global-margin t)
-     (python
-      :variables
-      python-test-runner 'pytest            ;; TODO: Test the tests
-      python-enable-yapf-format-on-save t)  ;; TODO: Test YAPF on large files
+     ;; (python
+     ;;  :variables
+     ;;  python-test-runner 'pytest            ;; TODO: Test the tests
+     ;;  python-enable-yapf-format-on-save t)  ;; TODO: Test YAPF on large files
      (typescript
       :variables
       typescript-fmt-on-save t
@@ -56,8 +54,8 @@ values."
       auto-completion-enable-sort-by-usage t)
      )
    dotspacemacs-additional-packages '()
-   dotspacemacs-frozen-packages '()
    dotspacemacs-excluded-packages '()
+   dotspacemacs-frozen-packages '()
    dotspacemacs-install-packages 'used-only))
 
 (defun dotspacemacs/init ()
