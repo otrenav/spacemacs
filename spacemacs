@@ -30,10 +30,10 @@ values."
       :variables
       version-control-diff-tool 'diff-hl    ;; TODO: Compare to git-gutter
       version-control-global-margin t)
-     ;; (python
-     ;;  :variables
-     ;;  python-test-runner 'pytest            ;; TODO: Test the tests
-     ;;  python-enable-yapf-format-on-save t)  ;; TODO: Test YAPF on large files
+     (python
+      :variables
+      python-test-runner 'pytest            ;; TODO: Test the tests
+      python-enable-yapf-format-on-save t)  ;; TODO: Test YAPF on large files
      (typescript
       :variables
       typescript-fmt-on-save t
@@ -47,11 +47,11 @@ values."
       syntax-checking-use-original-bitmaps t) ;; TODO: remove bitmaps?
      (auto-completion
       :variables
-      auto-completion-tab-key-behavior 'cycle
-      auto-completion-return-key-behavior 'complete
-      auto-completion-enable-snippets-in-popup t
       auto-completion-enable-help-tooltip t
-      auto-completion-enable-sort-by-usage t)
+      auto-completion-enable-sort-by-usage t
+      auto-completion-tab-key-behavior 'cycle
+      auto-completion-enable-snippets-in-popup t
+      auto-completion-return-key-behavior 'complete)
      )
    dotspacemacs-additional-packages '()
    dotspacemacs-excluded-packages '()
