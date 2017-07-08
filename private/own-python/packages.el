@@ -32,5 +32,15 @@
 ;;
 
 (defconst own-python-packages
-  ;; Possibly include MELPA "python" instead of built-in
-  '())
+  ;; TODO: Possibly include MELPA "python" instead of built-in
+  ;; TODO: Possibly add "virtualenvwrapper" if necessary
+  '(anaconda-mode))
+
+(defun own-python/post-init-anaconda-mode ()
+  ;; TODO: Add the following keybindings:
+  ;; ("r" anaconda-mode-find-references  "References")
+  ;; ("d" anaconda-mode-find-definitions "Definitions")
+  ;; ("a" anaconda-mode-find-assignments "Assignments")
+  ;; ("o" anaconda-mode-show-doc         "Documentation")
+  ;; ("b" anaconda-mode-go-back          "Go back"))
+  )
