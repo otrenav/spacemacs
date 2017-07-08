@@ -1,7 +1,7 @@
-#+TITLE: own-ess layer
+#+TITLE: own-python layer
 
 # The maximum height of the logo should be 200 pixels.
-[[img/own-ess.png]]
+[[img/own-python.png]]
 
 # TOC links should be GitHub style anchors.
 * Table of Contents                                        :TOC_4_gh:noexport:
@@ -15,7 +15,7 @@ This layer does wonderful things:
 
 * Install
 To use this configuration layer, add it to your =~/.spacemacs=. You will need to
-add =own-ess= to the existing =dotspacemacs-configuration-layers= list in this
+add =own-python= to the existing =dotspacemacs-configuration-layers= list in this
 file.
 
 * Key bindings

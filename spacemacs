@@ -11,6 +11,7 @@ values."
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-configuration-layers
    '(
+     ;; Spacemacs layers
      helm
      ess
      javascript
@@ -52,6 +53,13 @@ values."
       auto-completion-tab-key-behavior 'cycle
       auto-completion-enable-snippets-in-popup t
       auto-completion-return-key-behavior 'complete)
+
+     ;; Own layers
+     own-ess
+     own-html
+     own-dired
+     own-windows
+     own-keybindings
      )
    dotspacemacs-additional-packages '()
    dotspacemacs-excluded-packages '()
@@ -151,9 +159,45 @@ you should place your code here."
   (global-company-mode)
   (global-git-commit-mode t)
   (global-git-gutter-mode t)
+  (global-auto-revert-mode t)
+
+  ;; Keybindings
+  ;; (global-unset-key "\C-x\C-z")
+  ;; (global-unset-key "\C-x\C-c")
+  ;; (bind-key "C-S-s" #'isearch-forward)
+  (bind-key "C-x C-n" #'next-line)
+  (bind-key "C-+" #'text-scale-increase)
+  (bind-key "C--" #'text-scale-decrease)
+  (bind-key "M-/" 'comment-or-uncomment-region)
+  ;; (global-set-key (kbd "M-/") 'comment-or-uncomment-region)
+  (substitute-key-definition 'kill-buffer 'kill-this-buffer global-map)
 
   ;; Don't bother me
-  (setq vc-follow-symlinks t)
+  (setq-default vc-follow-symlinks t)
+
+  ;; TODO: Check if necessary
+  (setq-default tab-width 4)
+  (setq-default fill-column 80)
+  (setq-default truncate-lines t)
+  ;; (setq-default use-dialog-box nil)
+  (setq-default indent-tabs-mode nil)
+  (setq-default select-enable-clipboard t)
+  ;; (setq-default auto-fill-function 'do-auto-fill)
+
+  (tool-bar-mode -1)
+  (scroll-bar-mode -1)
+  (blink-cursor-mode t)
+  (global-linum-mode 0)
+  (transient-mark-mode t)
+  (delete-selection-mode t)
+  (prefer-coding-system 'utf-8)
+  (set-keyboard-coding-system 'utf-8)
+
+  ;; Autorevert, update files when changed on disk
+  (setq-default global-auto-revert-non-file-buffers t)
+  (setq-default auto-revert-verbose nil)
+
+  ;; (defalias 'yes-or-no-p 'y-or-n-p)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -165,7 +209,7 @@ you should place your code here."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (org-projectile org-present org-pomodoro alert log4e gntp org-download htmlize gnuplot ess-smart-equals ess-R-object-popup ess-R-data-view ctable ess julia-mode company-quickhelp flyspell-popup unfill smeargle orgit mwim magit-gitflow helm-gitignore helm-company helm-c-yasnippet gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter fuzzy flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip evil-magit magit magit-popup git-commit with-editor diff-hl company-web web-completion-data company-tern dash-functional company-statistics company-shell company-auctex company-anaconda company auto-yasnippet auto-dictionary ac-ispell auto-complete insert-shebang fish-mode auctex-latexmk auctex tern xterm-color shell-pop multi-term eshell-z eshell-prompt-extras esh-help tide typescript-mode flycheck web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor yasnippet multiple-cursors js2-mode js-doc coffee-mode web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode helm-pydoc cython-mode anaconda-mode pythonic mmm-mode markdown-toc markdown-mode gh-md yaml-mode ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed dash aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async))))
+    (key-seq key-chord dired-single dired+ org-projectile org-present org-pomodoro alert log4e gntp org-download htmlize gnuplot ess-smart-equals ess-R-object-popup ess-R-data-view ctable ess julia-mode company-quickhelp flyspell-popup unfill smeargle orgit mwim magit-gitflow helm-gitignore helm-company helm-c-yasnippet gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter fuzzy flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip evil-magit magit magit-popup git-commit with-editor diff-hl company-web web-completion-data company-tern dash-functional company-statistics company-shell company-auctex company-anaconda company auto-yasnippet auto-dictionary ac-ispell auto-complete insert-shebang fish-mode auctex-latexmk auctex tern xterm-color shell-pop multi-term eshell-z eshell-prompt-extras esh-help tide typescript-mode flycheck web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor yasnippet multiple-cursors js2-mode js-doc coffee-mode web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode helm-pydoc cython-mode anaconda-mode pythonic mmm-mode markdown-toc markdown-mode gh-md yaml-mode ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed dash aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
