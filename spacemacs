@@ -5,10 +5,6 @@
 You should not put any user code in this function besides modifying the variable
 values."
   (setq-default
-   dotspacemacs-enable-lazy-installation 'unused
-   dotspacemacs-ask-for-lazy-installation t
-   dotspacemacs-configuration-layer-path '()
-   dotspacemacs-distribution 'spacemacs
    dotspacemacs-configuration-layers
    '(
      ;; Spacemacs layers
@@ -63,6 +59,10 @@ values."
      own-html
      own-ess
      )
+   dotspacemacs-enable-lazy-installation 'unused
+   dotspacemacs-configuration-layer-path '()
+   dotspacemacs-ask-for-lazy-installation t
+   dotspacemacs-distribution 'spacemacs
    dotspacemacs-additional-packages '()
    dotspacemacs-excluded-packages '()
    dotspacemacs-frozen-packages '()
@@ -177,6 +177,10 @@ you should place your code here."
   (global-linum-mode 0)
   (scroll-bar-mode -1)
   (tool-bar-mode -1)
+
+  ;; `hippie-expand' overrides this key binding if it's put inside
+  ;; my `own-keybindings' layer, so it goes here to give it priority
+  (global-set-key (kbd "M-/") 'comment-or-uncomment-region)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will

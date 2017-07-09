@@ -1,3 +1,6 @@
+;;
+;; - Show `key-chord' keybindings  `key-chord-describe'
+;;
 
 (defconst own-keybindings-packages
   '(key-chord
@@ -16,10 +19,10 @@
     :demand
     :commands (key-seq-define-global)))
 
+
 (global-unset-key "\C-x\C-z")
 (global-unset-key "\C-x\C-c")
 
-(global-set-key (kbd "M-/")     'comment-or-uncommon-region)
 (global-set-key (kbd "C-+")     'text-scale-increase)
 (global-set-key (kbd "C--")     'text-scale-decrease)
 (global-set-key (kbd "C-x C-n") 'next-line)
