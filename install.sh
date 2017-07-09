@@ -7,27 +7,15 @@
 # Emacs and Spacemacs.
 #
 
-# ;; - Flycheck > Flymake
-#    ;;
-#    ;; - CSSLint  (CSS)          sudo npm install -g csslint
-#    ;; - Tidy     (HTML)         sudo apt-get install tidy
-#    ;;                           brew install tidy-html5
-#    ;; - ESLint   (JavaScript)   sudo npm install -g eslint
-#    ;; - JSONLint (JSON)         sudo npm install -g jsonlint
-#    ;; - Flake8   (Python)       sudo pip install flake8
-#    ;; - Pylint   (Python)       sudo apt-get install pylint
-# ;; Requires:
-# ;; - hunspell (sudo apt-get install hunspell)
-# ;; - aspell   (sudo apt-get install aspell)
-# ;; Requirements:
-# ;; - Jedi     sudo pip install jedi
-# ;; - Radon    sudo pip install radon
-# ;; - Flake8   sudo pip install flake8
-# ;; - IPython  sudo pip install ipython
-
 # Requirements
-sudo npm install -g tern js-beautify eslint jshint typescript tslint typescript-formatter
-sudo pip install autoflake hy
+if [[ "$unamestr" == 'Linux' ]]; then
+    sudo apt-get install hunspell aspell pylint tidy
+elif [[ "$unamestr" == 'Darwin' ]]; then
+    # TODO: Test this
+    hombrew install hunspell aspell pylint tidy-html5
+fi
+sudo npm install -g tern js-beautify eslint jshint typescript tslint typescript-formatter csslint jsonlint
+sudo pip install autoflake hy jedi radon flake8 ipython
 
 # Installation
 rm -rf ~/.emacs.d
