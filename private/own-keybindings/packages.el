@@ -14,8 +14,14 @@
   ;; The key-seq's package bindings are ordered
   (use-package key-seq
     :demand
-    :config
-    ;; The avy package is in Spacemacs
-    (key-seq-define-global "kk" 'avy-goto-char)
-    (key-seq-define-global "ww" 'delete-window)
-    (key-seq-define-global "bb" 'mode-line-other-buffer)))
+    :commands (key-seq-define-global)))
+
+(global-unset-key "\C-x\C-z")
+(global-unset-key "\C-x\C-c")
+
+(global-set-key (kbd "M-/")     'comment-or-uncommon-region)
+(global-set-key (kbd "C-+")     'text-scale-increase)
+(global-set-key (kbd "C--")     'text-scale-decrease)
+(global-set-key (kbd "C-x C-n") 'next-line)
+
+(substitute-key-definition 'kill-buffer 'kill-this-buffer global-map)

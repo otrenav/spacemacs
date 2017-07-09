@@ -2,8 +2,8 @@
 (defun own/dired/up-directory ()
   "Move up one level in Dired buffer."
   (interactive)
-  (dired-single-buffer ".."))
-
+  ;; Requires `Dired+' package
+  (diredp-up-directory-reuse-dir-buffer))
 
 (defun own/dired/switch-to-dired-buffer ()
   "Switch to the first Dired buffer found."

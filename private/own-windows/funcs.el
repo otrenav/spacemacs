@@ -1,11 +1,12 @@
 
-(defun user-emacs-tabbar-groups ()
+(defun own/tabbar/groups ()
   "Returns the name of the tab group names the current buffer belongs to.
-There are two groups: Emacs buffers (those whose name starts with '*',
-plus dired buffers), and the rest."
-  (list (cond ((string-equal "*" (substring (buffer-name) 0 1)) "emacs")
-              ((eq major-mode 'dired-mode) "emacs")
-              (t "user"))))
+There are two groups: Emacs (those whose name starts with '*', ' *', or
+are Dired buffers), and the rest."
+  (list (cond ((string-equal " *" (substring (buffer-name) 0 2)) "Emacs")
+              ((string-equal "*"  (substring (buffer-name) 0 1)) "Emacs")
+              ((eq major-mode 'dired-mode) "Emacs")
+              (t "User"))))
 
 (defun own/windows/three-even-windows ()
   "Create three horizontally evenly spaced windows."
@@ -15,6 +16,3 @@ plus dired buffers), and the rest."
   (split-window-right)
   (balance-windows)
   (other-window 1))
-
-;; TODO: Bind somewhere (how?)
-;; (global-set-key (kbd "<f6>") 'own/windows/three-even-windows)

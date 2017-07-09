@@ -3,7 +3,6 @@
   '(ess))
 
 (defun own-ess/post-init-ess ()
-  ;; TODO: Check REPL is working
   (setq-default ess-language "R")
   (setq-default inferior-R-program-name "R")
   (setq-default ess-ask-for-ess-directory nil)
