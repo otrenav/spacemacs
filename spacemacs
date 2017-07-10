@@ -119,13 +119,13 @@ values."
    dotspacemacs-helm-position 'bottom
    dotspacemacs-elpa-subdirectory nil
    dotspacemacs-persistent-server nil
-   dotspacemacs-check-for-update nil
    dotspacemacs-max-rollback-slots 5
    dotspacemacs-folding-method 'evil
    dotspacemacs-editing-style 'emacs
    dotspacemacs-verbose-loading nil
    dotspacemacs-which-key-delay 0.3
    dotspacemacs-ex-command-key ":"
+   dotspacemacs-check-for-update t
    dotspacemacs-smooth-scrolling t
    dotspacemacs-helm-no-header nil
    dotspacemacs-startup-banner nil
