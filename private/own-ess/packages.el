@@ -4,6 +4,7 @@
 
 (defun own-ess/post-init-ess ()
   (setq-default ess-language "R")
+  (setq-default ess-fancy-comments nil)
   (setq-default inferior-R-program-name "R")
   (setq-default ess-ask-for-ess-directory nil)
   (setq-default flycheck-lintr-linters
