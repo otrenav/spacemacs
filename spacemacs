@@ -51,6 +51,7 @@ values."
 
      ;; Own layers
      own-keybindings
+     own-markdown
      own-editing
      own-windows
      own-python
