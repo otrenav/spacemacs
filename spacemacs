@@ -78,8 +78,8 @@ values."
   (setq-default
    dotspacemacs-default-font '("Input"
                                :size 20
-                               :weight normal
                                :width normal
+                               :weight normal
                                :powerline-scale 1.1)
    dotspacemacs-startup-lists '((recents . 5) (bookmarks . 5) (projects . 5))
    dotspacemacs-themes '(spacemacs-light spacemacs-dark)
@@ -182,6 +182,15 @@ you should place your code here."
   ;; `hippie-expand' overrides this key binding if it's put inside
   ;; my `own-keybindings' layer, so it goes here to give it priority
   (global-set-key (kbd "M-/") 'comment-or-uncomment-region)
+
+  ;; Change font for Mac OS X
+  (if (eq system-type 'darwin)
+      (setq-default dotspacemacs-default-font '("Input"
+                                                :size 16
+                                                :width normal
+                                                :weight normal
+                                                :powerline-scale 1.1)))
+  (spacemacs/set-default-font dotspacemacs-default-font)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
