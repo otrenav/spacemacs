@@ -26,3 +26,6 @@ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 rm -rf ~/.emacs.d/private
 ln -s ~/Projects/system/spacemacs/private ~/.emacs.d/private
+
+rm -rf ~/.emacs.d/.cache/bookmarks
+ln -s ~/Projects/system/spacemacs/bookmarks ~/.emacs.d/.cache/bookmarks

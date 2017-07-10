@@ -1,0 +1,25 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("score-data"
+ (filename . "~/Projects/datata/score-data/project/")
+ (front-context-string . "datata_comunicad")
+ (rear-context-string . "96 jul  2 20:36 ")
+ (position . 377))
+("posts"
+ (filename . "~/Projects/personal/blog/_posts/")
+ (front-context-string . "2012-06-06-sonam")
+ (rear-context-string . "08 abr 27 19:55 ")
+ (position . 253))
+("book"
+ (filename . "~/Projects/personal/r-programming-by-example/")
+ (front-context-string . "agreement\n  drwx")
+ (rear-context-string . "96 may 24 19:46 ")
+ (position . 262))
+("spacemacs"
+ (filename . "~/Projects/system/spacemacs/")
+ (front-context-string . "private\n  -rw-rw")
+ (rear-context-string . "96 jul  9 03:56 ")
+ (position . 364))
+)
