@@ -167,6 +167,7 @@ you should place your code here."
   (setq-default auto-revert-verbose nil)
   (setq-default indent-tabs-mode nil)
   (setq-default vc-follow-symlinks t)
+  (setq-default use-dialog-box nil)
   (setq-default truncate-lines t)
   (setq-default fill-column 80)
   (setq-default tab-width 4)

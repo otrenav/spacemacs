@@ -4,6 +4,10 @@
 
 (defun own-ess/post-init-ess ()
   (setq-default ess-language "R")
+  (setq-default ess-indent-level 4)
+  (setq-default ess-indent-offset 4)
+  (setq-default ess-default-style 'OWN)
+  (setq-default ess-toggle-underscore nil)
   (setq-default inferior-R-program-name "R")
   (setq-default ess-ask-for-ess-directory nil)
   (setq-default ess-indent-with-fancy-comments nil)

@@ -11,7 +11,6 @@
 if [[ "$unamestr" == 'Linux' ]]; then
     sudo apt-get install hunspell aspell pylint tidy
 elif [[ "$unamestr" == 'Darwin' ]]; then
-    # TODO: Test this
     hombrew install hunspell aspell pylint tidy-html5
 fi
 sudo npm install -g tern js-beautify eslint jshint typescript tslint typescript-formatter csslint jsonlint
