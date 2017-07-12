@@ -1,5 +1,5 @@
 
-| [Website](https://www.otrenav.com) | [Twitter](https://www.twitter.com/otrenav) | [LinkedIn](https://www.linkedin.com/in/otrenav/) | [GitHub](https://github.com/otrenav) | [GitLab](https://gitlab.com/otrenav) | [CodeMentor](https://www.codementor.io/otrenav) |
+| [Website](https://links.otrenav.com/website) | [Twitter](https://links.otrenav.com/twitter) | [LinkedIn](https://links.otrenav.com/linkedin)  | [GitHub](https://links.otrenav.com/github) | [GitLab](https://links.otrenav.com/gitlab) | [CodeMentor](https://links.otrenav.com/codementor) |
 
 # Spacemacs Configuration
 
@@ -18,4 +18,6 @@ best editor :P), go to: https://www.gnu.org/software/emacs/.
 
 ---
 
-> Learn something new every day! ;)
+> "The best ideas are common property."
+>
+> —June Jordan
