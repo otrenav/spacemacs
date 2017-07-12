@@ -1,5 +1,5 @@
 
-| [Website](https://www.otrenav.com) | [Twitter](https://www.twitter.com/otrenav) | [LinkedIn](https://www.linkedin.com/in/otrenav/) | [GitHub](https://github.com/otrenav) | [GitLab](https://gitlab.com/otrenav) | [CodeMentor](https://www.codementor.io/otrenav)
+| [Website](https://www.otrenav.com) | [Twitter](https://www.twitter.com/otrenav) | [LinkedIn](https://www.linkedin.com/in/otrenav/) | [GitHub](https://github.com/otrenav) | [GitLab](https://gitlab.com/otrenav) | [CodeMentor](https://www.codementor.io/otrenav) |
 
 # Spacemacs Configuration
 
