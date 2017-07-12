@@ -20,4 +20,4 @@ best editor :P), go to: https://www.gnu.org/software/emacs/.
 
 > "The best ideas are common property."
 >
-> —June Jordan
+> —Seneca
