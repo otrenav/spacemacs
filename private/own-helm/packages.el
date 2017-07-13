@@ -11,7 +11,7 @@
     (key-seq-define-global "jf" 'helm-find-files)
     (key-seq-define-global "vb" 'helm-buffers-list)
     (key-seq-define-global "jg" 'helm-browse-project)
-    (key-seq-define-global ".a" 'helm-filtered-bookmarks)))
+    (key-seq-define-global ";a" 'helm-filtered-bookmarks)))
 
 (defun own-helm/post-init-helm-swoop ()
   (global-set-key (kbd "M-i")     'helm-swoop)
