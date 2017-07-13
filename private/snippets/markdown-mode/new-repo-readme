@@ -1,0 +1,18 @@
+# -*- mode: snippet -*-
+# name: New Repository README
+# key:  new-repo-readme
+# --
+
+| [Website](https://links.otrenav.com/website) | [Twitter](HTTP://links.otrenav.com/twitter) | [LinkedIn](https://links.otrenav.com/linkedin)  | [GitHub](https://links.otrenav.com/github) | [GitLab](https://links.otrenav.com/gitlab) | [CodeMentor](https://links.otrenav.com/codementor) |
+
+---
+
+# $1
+
+$0
+
+---
+
+> "The best ideas are common property."
+>
+> —Seneca
