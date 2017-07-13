@@ -58,6 +58,7 @@ values."
      own-python
      own-dired
      own-helm
+     own-yaml
      own-html
      own-ess
      )
