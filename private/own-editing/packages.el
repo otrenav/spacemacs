@@ -21,6 +21,7 @@
     :bind ("M-j" . multi-line)))
 
 (defun own-editing/post-init-whitespace ()
+  (setq-default system-time-locale "C")
   (setq-default whitespace-auto-cleanup t)
   (setq-default show-trailing-whitespace t)
   (setq-default whitespace-rescan-timer-time nil)

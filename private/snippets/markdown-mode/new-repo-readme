@@ -9,6 +9,9 @@
 
 # $1
 
+- Omar Trejo
+- `(format-time-string "%B, %Y")`
+
 $0
 
 ---
