@@ -63,11 +63,11 @@ values."
      own-ess
      )
    dotspacemacs-enable-lazy-installation 'unused
+   dotspacemacs-excluded-packages '(smartparens)
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-ask-for-lazy-installation t
    dotspacemacs-distribution 'spacemacs
    dotspacemacs-additional-packages '()
-   dotspacemacs-excluded-packages '()
    dotspacemacs-frozen-packages '()
    dotspacemacs-install-packages 'used-only))
 
