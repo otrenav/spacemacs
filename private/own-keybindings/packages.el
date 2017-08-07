@@ -2,6 +2,10 @@
 ;; - Show `key-chord' keybindings  `key-chord-describe'
 ;;
 
+;; TODO: Expand region   (M-m v)
+;; TODO: Contract region (M-m V)
+;; TODO: Indent region   (M-m j =)
+
 (defconst own-keybindings-packages
   '(key-chord
     key-seq))
