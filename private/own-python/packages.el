@@ -8,8 +8,6 @@
 ;;
 
 (defconst own-python-packages
-  ;; TODO: Possibly include MELPA "python" instead of built-in
-  ;; TODO: Possibly add "virtualenvwrapper" if necessary
   '(anaconda-mode))
 
 (defun own-python/post-init-anaconda-mode ()
