@@ -4,6 +4,7 @@
 
 (defun own-ess/pre-init-ess ()
   (defun r-setup ()
+    (setq comment-add 0)
     (setq ess-language "R")
     (setq ess-indent-level 4)
     (setq ess-indent-offset 4)
