@@ -6,6 +6,8 @@
 ;; - Shift 4 spaces to the right  C-c >
 ;; - Shift 4 spaces to the left   C-c <
 ;;
+;; - yapify-buffer to format Python code with YAPF
+;;
 
 (defconst own-python-packages
   '(anaconda-mode))
