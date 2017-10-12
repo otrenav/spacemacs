@@ -15,3 +15,7 @@
   ;; (setq-default web-mode-enable-current-column-highlight t)
   ;; (setq-default web-mode-enable-current-element-highlight t)
   (setq-default web-mode-engines-alist '(("django" . "\\.html\\'"))))
+
+(add-hook 'web-mode-hook
+          '(lambda ()
+             (global-set-key (kbd "<tab>") 'indent-for-tab-command)))
