@@ -7,10 +7,8 @@ values."
   (setq-default
    dotspacemacs-configuration-layers
    '(
-     sql
      ;; Spacemacs layers
      syntax-checking
-     ;; shell-scripts  ;; TODO: Useful?
      emacs-lisp
      javascript
      markdown
@@ -20,7 +18,7 @@ values."
      html
      yaml
      ruby
-     ;; org
+     sql
      csv
      git
      ess
@@ -30,7 +28,7 @@ values."
       shell-default-height 30)
      (version-control
       :variables
-      version-control-diff-tool 'diff-hl         ;; Option: git-gutter
+      version-control-diff-tool 'diff-hl
       version-control-global-margin t)
      (python
       :variables
@@ -38,11 +36,11 @@ values."
       python-test-runner 'pytest)                ;; TODO: Test the tests
      (typescript
       :variables
-      typescript-fmt-tool 'typescript-formatter  ;; TODO: test `tide' instead
+      typescript-fmt-tool 'typescript-formatter
       typescript-fmt-on-save t)
      (spell-checking
       :variables
-      spell-checking-enable-auto-dictionary t    ;; TODO: test automatic language
+      spell-checking-enable-auto-dictionary t
       enable-flyspell-auto-completion t)
      (auto-completion
       :variables
@@ -87,7 +85,7 @@ values."
                                :weight normal
                                :powerline-scale 1.1)
    dotspacemacs-startup-lists '((recents . 10) (bookmarks . 10) (projects . 10))
-   dotspacemacs-themes '(atom-one-light atom-one-dark dracula spacemacs-light)
+   dotspacemacs-themes '(spacemacs-dark spacemacs-light)
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-major-mode-emacs-leader-key "C-M-m"
@@ -194,10 +192,10 @@ you should place your code here."
   (global-set-key (kbd "M-/") 'comment-or-uncomment-region)
 
   ;; Change font for Mac OS X
-  (if (eq system-type 'darwin)
-      (setq-default dotspacemacs-default-font '("Input"
-                                                :size 16
-                                                :width normal
-                                                :weight normal
-                                                :powerline-scale 1.1)))
+  ;; (if (eq system-type 'darwin)
+  ;;     (setq-default dotspacemacs-default-font '("Input"
+  ;;                                               :size 16
+  ;;                                               :width normal
+  ;;                                               :weight normal
+  ;;                                               :powerline-scale 1.1)))
   (spacemacs/set-default-font dotspacemacs-default-font))

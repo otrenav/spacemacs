@@ -12,10 +12,9 @@
   ;; (setq-default web-mode-markup-indent-offset 4)
   ;; (setq-default web-mode-enable-css-colorization t)
   ;; (setq-default web-mode-enable-comment-keywords t)
-  ;; (setq-default web-mode-enable-current-column-highlight t)
-  ;; (setq-default web-mode-enable-current-element-highlight t)
+  (setq-default web-mode-enable-current-column-highlight t)
+  (setq-default web-mode-enable-current-element-highlight t)
   (setq-default web-mode-engines-alist '(("django" . "\\.html\\'"))))
 
-(add-hook 'web-mode-hook
-          '(lambda ()
-             (global-set-key (kbd "<tab>") 'indent-for-tab-command)))
+(eval-after-load 'web-mode
+  '(define-key web-mode-map (kbd "<tab>") 'indent-for-tab-command))
