@@ -7,7 +7,6 @@ values."
   (setq-default
    dotspacemacs-configuration-layers
    '(
-     ;; Spacemacs layers
      syntax-checking
      emacs-lisp
      javascript
@@ -33,15 +32,16 @@ values."
      (python
       :variables
       ;; python-enable-yapf-format-on-save t
-      python-test-runner 'pytest)                ;; TODO: Test the tests
+      python-test-runner 'pytest)
      (typescript
       :variables
       typescript-fmt-tool 'typescript-formatter
       typescript-fmt-on-save t)
      (spell-checking
       :variables
-      spell-checking-enable-auto-dictionary t
-      enable-flyspell-auto-completion t)
+      enable-flyspell-auto-completion t
+      spell-checking-enable-by-default nil
+      spell-checking-enable-auto-dictionary t)
      (auto-completion
       :variables
       auto-completion-return-key-behavior 'complete
@@ -158,8 +158,10 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
 
-  ;; TODO: Temporary fix to avoid
-  ;; "Symbol's variable name is void: helm-bookmark-map"
+  ;; Disable spellchecking by default
+  ;; (setq-default dotspacemacs-configuration-layers
+  ;;               '((spell-checking :variables spell-checking-enable-by-default nil)))
+  ;; Fix to avoid: "Symbol's variable name is void: helm-bookmark-map"
   (require 'helm-bookmark)
 
   (global-company-mode)
