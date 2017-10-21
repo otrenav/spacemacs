@@ -23,10 +23,21 @@
     :demand
     :commands (key-seq-define-global)))
 
+(defun own/kill-all-buffers ()
+  (interactive)
+  (mapc 'kill-buffer (buffer-list)))
+
+(defun own/kill-emacs-client ()
+  "Kill Emacs client by killing all buffers, frames, and windows."
+  (interactive)
+  (own/kill-all-buffers)
+  (spacemacs/toggle-maximize-buffer)
+  (delete-window))
 
 (global-unset-key "\C-x\C-z")
 (global-unset-key "\C-x\C-c")
 
+(global-set-key (kbd "C-Q")     'own/kill-emacs-client)
 (global-set-key (kbd "C-+")     'text-scale-increase)
 (global-set-key (kbd "C--")     'text-scale-decrease)
 (global-set-key (kbd "C-x C-n") 'next-line)
