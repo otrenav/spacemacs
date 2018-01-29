@@ -7,6 +7,7 @@ values."
   (setq-default
    dotspacemacs-configuration-layers
    '(
+     rust
      syntax-checking
      emacs-lisp
      javascript
@@ -85,7 +86,7 @@ values."
                                :weight normal
                                :powerline-scale 1.1)
    dotspacemacs-startup-lists '((recents . 10) (bookmarks . 10) (projects . 10))
-   dotspacemacs-themes '(spacemacs-dark spacemacs-light)
+   dotspacemacs-themes '(spacemacs-light atom-one-light spacemacs-dark atom-one-dark)
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-major-mode-emacs-leader-key "C-M-m"
@@ -172,6 +173,7 @@ you should place your code here."
   (setq-default global-auto-revert-non-file-buffers t)
   (setq-default auto-fill-function 'do-auto-fill)
   (setq-default select-enable-clipboard t)
+  (setq-default scroll-conservatively 101)
   (setq-default auto-revert-verbose nil)
   (setq-default indent-tabs-mode nil)
   (setq-default vc-follow-symlinks t)

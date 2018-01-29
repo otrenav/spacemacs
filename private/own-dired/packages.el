@@ -6,7 +6,8 @@
 
 (defconst own-dired-packages
   '(dired
-    dired+))
+    ;; dired+
+    ))
 
 (defun own-dired/post-init-dired ()
   (define-key dired-mode-map (kbd "l") 'own/dired/up-directory)
@@ -14,8 +15,11 @@
   (with-eval-after-load 'key-seq
     (key-seq-define-global ";d" 'own/dired/switch-to-dired-buffer)))
 
-(defun own-dired/init-dired+ ()
-  (use-package dired+
-    :demand
-    :config
-    (diredp-toggle-find-file-reuse-dir 1)))
+;;
+;; Seems that this package no longer exists
+;;
+;; (defun own-dired/init-dired+ ()
+;;   (use-package dired+
+;;     :demand
+;;     :config
+;;     (diredp-toggle-find-file-reuse-dir 1)))

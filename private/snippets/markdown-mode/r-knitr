@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+#name : r-knitr
+#key : rcode
+# --
+\`\`\`{r $1}
+$2
+\`\`\`
+
+$0
