@@ -14,7 +14,7 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
     hombrew install hunspell aspell pylint tidy-html5
 fi
 sudo npm install -g tern js-beautify eslint jshint typescript tslint typescript-formatter csslint jsonlint
-sudo pip install autoflake hy jedi radon flake8 ipython
+sudo pip install autoflake hy jedi radon flake8 ipython importmagic epc
 sudo gem install pry pry-doc ruby_parser rubocop
 
 # Installation
