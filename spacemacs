@@ -3,9 +3,7 @@
 (defun dotspacemacs/layers ()
   (setq-default
    dotspacemacs-configuration-layers
-   '(
-     rust
-     syntax-checking
+   '(syntax-checking
      emacs-lisp
      javascript
      markdown
@@ -18,6 +16,7 @@
      sql
      csv
      git
+     php
      ess
      (shell
       :variables
@@ -81,7 +80,7 @@ any user code in there besides modifying the variable values."
                                :width normal
                                :weight normal
                                :powerline-scale 1.1)
-   dotspacemacs-startup-lists '((recents . 10) (bookmarks . 10) (projects . 10))
+   dotspacemacs-startup-lists '((recents . 10) (bookmarks . 10))
    ;; dotspacemacs-themes '(spacemacs-light atom-one-light spacemacs-dark atom-one-dark)
    dotspacemacs-themes '(spacemacs-light spacemacs-dark atom-one-dark)
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
@@ -167,6 +166,13 @@ package is loaded, you should place your code here."
   (global-git-gutter-mode t)
   (global-auto-revert-mode t)
 
+  ;;
+  ;; Paradox GitHub
+  ;; TODO: Research
+  ;; DONT COMMIT!
+  ;;
+  (setq paradox-github-token "af7e09576b6e31ef0a918ba3710767680c78af22")
+
   (setq-default global-auto-revert-non-file-buffers t)
   (setq-default auto-fill-function 'do-auto-fill)
   (setq-default select-enable-clipboard t)
@@ -192,6 +198,9 @@ package is loaded, you should place your code here."
   ;; my `own-keybindings' layer, so it goes here to give it priority
   (global-set-key (kbd "M-/") 'comment-or-uncomment-region)
 
+  ;; Hide unnecessary files
+  (setq neo-show-hidden-files nil)
+
   ;; Change font for Mac OS X
   ;; (if (eq system-type 'darwin)
   ;;     (setq-default dotspacemacs-default-font '("Input"
@@ -200,3 +209,17 @@ package is loaded, you should place your code here."
   ;;                                               :weight normal
   ;;                                               :powerline-scale 1.1)))
   (spacemacs/set-default-font dotspacemacs-default-font))
+
+(defun dotspacemacs/emacs-custom-settings ()
+  "Emacs custom settings.
+This is an auto-generated function, do not modify its content directly, use
+Emacs customize menu instead.
+This function is called at the very end of Spacemacs initialization."
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (phpunit phpcbf php-extras php-auto-yasnippets helm-gtags ggtags drupal-mode counsel-gtags company-php ac-php-core xcscope php-mode yasnippet-snippets yapfify yaml-mode xterm-color ws-butler winum which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package toml-mode toc-org tide tagedit tabbar symon string-inflection sql-indent spaceline-all-the-icons smeargle slim-mode shell-pop scss-mode sass-mode rvm ruby-tools ruby-test-mode ruby-refactor ruby-hash-syntax rubocop rspec-mode robe restart-emacs rbenv rake rainbow-delimiters racer pyvenv pytest pyenv-mode py-isort pug-mode popwin pippel pip-requirements persp-mode password-generator paradox pandoc-mode ox-pandoc overseer org-bullets open-junk-file neotree nameless multi-term multi-line move-text mmm-mode minitest markdown-toc magit-gitflow macrostep lorem-ipsum livid-mode live-py-mode linum-relative link-hint less-css-mode key-seq json-mode js2-refactor js-doc indent-guide importmagic impatient-mode hy-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-pydoc helm-purpose helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gh-md fuzzy font-lock+ flyspell-popup flyspell-correct-helm flycheck-rust flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu ess-R-data-view eshell-z eshell-prompt-extras esh-help elisp-slime-nav editorconfig dumb-jump diminish diff-hl define-word cython-mode csv-mode counsel-projectile company-web company-tern company-statistics company-quickhelp company-auctex company-anaconda column-enforce-mode coffee-mode clean-aindent-mode chruby centered-cursor-mode cargo bundler browse-at-remote auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile atom-one-dark-theme aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))))
