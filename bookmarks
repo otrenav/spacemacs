@@ -2,31 +2,31 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("personal"
- (filename . "~/Projects/personal/")
+(("Projects"
+ (filename . "~/Projects/")
  (front-context-string . "flatfooted\n  drw")
  (rear-context-string . "96 Jan 31 16:06 ")
  (position . 554))
+("Downloads"
+ (filename . "~/Downloads/")
+ (front-context-string . "3418010889.pdf\n ")
+ (rear-context-string . "24 Feb  2 00:32 ")
+ (position . 236))
 ("otrenav.gitlab.io"
- (filename . "~/Projects/personal/otrenav.gitlab.io/")
+ (filename . "~/Projects/otrenav.gitlab.io/")
  (front-context-string . "_config.yml\n  -r")
  (rear-context-string . "31 Jan 11 02:42 ")
  (position . 258))
 ("cvest"
- (filename . "~/Projects/personal/cvest/")
+ (filename . "~/Projects/cvest/")
  (front-context-string . "app\n  drwxrwxr-x")
  (rear-context-string . "96 Nov 15 01:44 ")
  (position . 246))
 ("dr-teshima"
- (filename . "~/Projects/personal/dr-teshima/")
+ (filename . "~/Projects/dr-teshima/")
  (front-context-string . "apis-data-collec")
  (rear-context-string . "96 Jan 31 16:30 ")
  (position . 251))
-("flatfooted"
- (filename . "~/Projects/personal/flatfooted/")
- (front-context-string . "proxies\n  drwxrw")
- (rear-context-string . "96 Jan 20 12:45 ")
- (position . 548))
 ("spacemacs"
  (filename . "~/Projects/system/spacemacs/")
  (front-context-string . "private\n  -rw-r-")
