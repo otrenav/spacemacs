@@ -13,7 +13,7 @@
  (rear-context-string . "24 Feb  2 00:32 ")
  (position . 236))
 ("otrenav.gitlab.io"
- (filename . "~/Projects/otrenav.gitlab.io/")
+ (filename . "~/Projects/otrenav/website/")
  (front-context-string . "_config.yml\n  -r")
  (rear-context-string . "31 Jan 11 02:42 ")
  (position . 258))
@@ -23,7 +23,7 @@
  (rear-context-string . "96 Nov 15 01:44 ")
  (position . 246))
 ("dr-teshima"
- (filename . "~/Projects/dr-teshima/")
+ (filename . "~/Projects/otrenav/dr-teshima/")
  (front-context-string . "apis-data-collec")
  (rear-context-string . "96 Jan 31 16:30 ")
  (position . 251))
