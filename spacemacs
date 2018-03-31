@@ -28,10 +28,10 @@
       :variables
       js-indent-level 2
       js2-basic-offset 2)
-     (javascript
-      :variables
-      js-indent-level 2
-      js2-basic-offset 2)
+     ;; (javascript
+     ;;  :variables
+     ;;  js-indent-level 2
+     ;;  js2-basic-offset 2)
      (shell
       :variables
       shell-default-position 'bottom
@@ -166,7 +166,6 @@ initialization after layers configuration. This is the place
 where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a
 package is loaded, you should place your code here."
-
   (require 'helm-bookmark)
 
   (global-company-mode)
@@ -198,6 +197,16 @@ package is loaded, you should place your code here."
   ;; `hippie-expand' overrides this key binding if it's put inside
   ;; my `own-keybindings' layer, so it goes here to give it priority
   (global-set-key (kbd "M-/") 'comment-or-uncomment-region)
+
+  ;; Add standard JavaScript files into React because currently,
+  ;; since they share extensions and the indicator at the top of
+  ;; the file is depcreated, there's no other way to detect files
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . react-mode))
+
+  ;; Remove emmet-mode keybindings (emmet-mode must be enabled for
+  ;; React to work correctly, but its keybindings are not useful)
+  (eval-after-load "emmet-mode"
+    '(progn (define-key emmet-mode-keymap (kbd "C-j") nil)))
 
   ;; Hide unnecessary files
   (setq neo-show-hidden-files nil)
