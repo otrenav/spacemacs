@@ -4,21 +4,34 @@
   (setq-default
    dotspacemacs-configuration-layers
    '(syntax-checking
+     ;; pandoc
+     ;; latex
+     ;; ruby
+     ;; rust
+     ;; sql
+     ;; php
      emacs-lisp
-     javascript
      markdown
-     pandoc
-     latex
      helm
-     html
      yaml
-     ruby
-     rust
-     sql
      csv
      git
-     php
      ess
+     (html
+      :variables
+      css-indent-offset 2
+      web-mode-css-indent-offset 2
+      web-mode-code-indent-offset 2
+      web-mode-attr-indent-offset 2
+      web-mode-markup-indent-offset 2)
+     (react
+      :variables
+      js-indent-level 2
+      js2-basic-offset 2)
+     (javascript
+      :variables
+      js-indent-level 2
+      js2-basic-offset 2)
      (shell
       :variables
       shell-default-position 'bottom
@@ -29,7 +42,6 @@
       version-control-global-margin t)
      (python
       :variables
-      ;; python-enable-yapf-format-on-save t
       python-test-runner 'pytest)
      (typescript
       :variables
@@ -61,7 +73,7 @@
      own-ess
      )
    dotspacemacs-enable-lazy-installation 'unused
-   dotspacemacs-excluded-packages '(smartparens ess-R-object-popup emmet-mode)
+   dotspacemacs-excluded-packages '(smartparens ess-R-object-popup)
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-ask-for-lazy-installation t
    dotspacemacs-distribution 'spacemacs
@@ -82,7 +94,6 @@ any user code in there besides modifying the variable values."
                                :weight normal
                                :powerline-scale 1.1)
    dotspacemacs-startup-lists '((recents . 10) (bookmarks . 10))
-   ;; dotspacemacs-themes '(spacemacs-light atom-one-light spacemacs-dark atom-one-dark)
    dotspacemacs-themes '(spacemacs-light spacemacs-dark atom-one-dark)
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
    dotspacemacs-colorize-cursor-according-to-state t
@@ -156,23 +167,12 @@ where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a
 package is loaded, you should place your code here."
 
-  ;; Disable spellchecking by default
-  ;; (setq-default dotspacemacs-configuration-layers
-  ;;               '((spell-checking :variables spell-checking-enable-by-default nil)))
-  ;; Fix to avoid: "Symbol's variable name is void: helm-bookmark-map"
   (require 'helm-bookmark)
 
   (global-company-mode)
   (global-git-commit-mode t)
   (global-git-gutter-mode t)
   (global-auto-revert-mode t)
-
-  ;;
-  ;; Paradox GitHub
-  ;; TODO: Research
-  ;; DONT COMMIT!
-  ;;
-  (setq paradox-github-token "af7e09576b6e31ef0a918ba3710767680c78af22")
 
   (setq-default global-auto-revert-non-file-buffers t)
   (setq-default auto-fill-function 'do-auto-fill)
@@ -210,17 +210,3 @@ package is loaded, you should place your code here."
   ;;                                               :weight normal
   ;;                                               :powerline-scale 1.1)))
   (spacemacs/set-default-font dotspacemacs-default-font))
-
-(defun dotspacemacs/emacs-custom-settings ()
-  "Emacs custom settings.
-This is an auto-generated function, do not modify its content directly, use
-Emacs customize menu instead.
-This function is called at the very end of Spacemacs initialization."
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (toml-mode racer helm-gtags ggtags flycheck-rust cargo rust-mode yasnippet-snippets yapfify yaml-mode xterm-color ws-butler winum which-key web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package toc-org tide tagedit tabbar symon string-inflection sql-indent spaceline-all-the-icons smeargle slim-mode shell-pop scss-mode sass-mode rvm ruby-tools ruby-test-mode ruby-refactor ruby-hash-syntax rubocop rspec-mode robe restart-emacs rbenv rake rainbow-delimiters pyvenv pytest pyenv-mode py-isort pug-mode popwin pippel pip-requirements phpunit phpcbf php-extras php-auto-yasnippets persp-mode password-generator paradox pandoc-mode ox-pandoc overseer org-bullets open-junk-file neotree nameless multi-term multi-line move-text mmm-mode minitest markdown-toc magit-gitflow macrostep lorem-ipsum livid-mode live-py-mode linum-relative link-hint less-css-mode key-seq json-mode js2-refactor js-doc indent-guide importmagic impatient-mode hy-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-pydoc helm-purpose helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gh-md fuzzy font-lock+ flyspell-popup flyspell-correct-helm flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu ess-R-data-view eshell-z eshell-prompt-extras esh-help elisp-slime-nav editorconfig dumb-jump drupal-mode diminish diff-hl define-word cython-mode csv-mode counsel-projectile company-web company-tern company-statistics company-quickhelp company-php company-auctex company-anaconda column-enforce-mode coffee-mode clean-aindent-mode chruby centered-cursor-mode bundler browse-at-remote auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile atom-one-dark-theme aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))))
