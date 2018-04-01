@@ -28,10 +28,10 @@
       :variables
       js-indent-level 2
       js2-basic-offset 2)
-     ;; (javascript
-     ;;  :variables
-     ;;  js-indent-level 2
-     ;;  js2-basic-offset 2)
+     (javascript
+      :variables
+      js-indent-level 2
+      js2-basic-offset 2)
      (shell
       :variables
       shell-default-position 'bottom
