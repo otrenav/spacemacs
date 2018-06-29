@@ -9,23 +9,23 @@
  (position . 331))
 ("Downloads"
  (filename . "~/Downloads/")
- (front-context-string . "")
- (rear-context-string . "")
+ (front-context-string . #1="")
+ (rear-context-string . #1#)
  (position . 0))
-("website"
- (filename . "~/Projects/otrenav/website/")
- (front-context-string . "")
- (rear-context-string . "")
+("otrenav"
+ (filename . "~/Projects/otrenav/otrenav/")
+ (front-context-string . #1="")
+ (rear-context-string . #1#)
  (position . 0))
 ("cvest"
  (filename . "~/Projects/cvest/")
- (front-context-string . "")
- (rear-context-string . "")
+ (front-context-string . #1="")
+ (rear-context-string . #1#)
  (position . 0))
 ("dr-teshima"
  (filename . "~/Projects/otrenav/dr-teshima/")
- (front-context-string . "")
- (rear-context-string . "")
+ (front-context-string . #1="")
+ (rear-context-string . #1#)
  (position . 0))
 ("spacemacs"
  (filename . "~/Projects/system/spacemacs/")
