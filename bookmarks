@@ -12,22 +12,17 @@
  (front-context-string . #1="")
  (rear-context-string . #1#)
  (position . 0))
-("otrenav"
- (filename . "~/Projects/otrenav/otrenav/")
+("Website"
+ (filename . "~/Projects/otrenav/website/")
  (front-context-string . #1="")
  (rear-context-string . #1#)
  (position . 0))
-("cvest"
- (filename . "~/Projects/cvest/")
- (front-context-string . #1="")
- (rear-context-string . #1#)
- (position . 0))
-("dr-teshima"
+("Dr Teshima"
  (filename . "~/Projects/otrenav/dr-teshima/")
  (front-context-string . #1="")
  (rear-context-string . #1#)
  (position . 0))
-("spacemacs"
+("Spacemacs"
  (filename . "~/Projects/system/spacemacs/")
  (front-context-string . "spacemacs")
  (rear-context-string . "")
