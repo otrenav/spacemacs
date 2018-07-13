@@ -1,16 +1,14 @@
 ;;
-;; - Anaconda > Elpy,  Jedi.el
-;; - Flake8   > PEP-8, Pyflakes
+;; - Black    > Flake8, PEP-8, Pyflakes
+;; - Anaconda > Elpy, Jedi.el
 ;; - Jedi     > Rope
 ;;
 ;; - Shift 4 spaces to the right  C-c >
 ;; - Shift 4 spaces to the left   C-c <
 ;;
-;; - yapify-buffer to format Python code with YAPF
-;;
 
 (defconst own-python-packages
-  '(anaconda-mode))
+  '(anaconda-mode (blacken :location local)))
 
 (defun own-python/post-init-anaconda-mode ()
   ;; TODO: Add the following keybindings:
@@ -20,3 +18,11 @@
   ;; ("o" anaconda-mode-show-doc         "Documentation")
   ;; ("b" anaconda-mode-go-back          "Go back"))
   )
+
+(defun own-python/pre-init-blacken ()
+  ;; (load "./local/blacken.el")
+  (require 'blacken)
+  (add-hook 'python-mode-hook 'blacken-mode)
+  )
+
+(defun own-python/init-blacken ())

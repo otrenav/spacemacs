@@ -14,8 +14,8 @@
     (key-seq-define-global ";a" 'helm-filtered-bookmarks)))
 
 (defun own-helm/post-init-helm-swoop ()
-  (global-set-key (kbd "M-i")     'helm-swoop)
   (global-set-key (kbd "C-. M-i") 'helm-multi-swoop)
   (global-set-key (kbd "C-. M-I") 'helm-multi-swoop-all)
+  (global-set-key (kbd "C-. C-i") 'helm-multi-swoop-current-mode)
   (global-set-key (kbd "M-I")     'helm-swoop-back-to-last-point)
-  (global-set-key (kbd "C-. C-i") 'helm-multi-swoop-current-mode))
+  (global-set-key (kbd "M-i")     'spacemacs/helm-swoop-region-or-symbol))
