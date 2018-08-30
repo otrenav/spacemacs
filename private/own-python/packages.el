@@ -20,7 +20,6 @@
   )
 
 (defun own-python/pre-init-blacken ()
-  ;; (load "./local/blacken.el")
   (require 'blacken)
   (add-hook 'python-mode-hook 'blacken-mode)
   )
