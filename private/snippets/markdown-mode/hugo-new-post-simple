@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: Hugo New Post Simple
+# key:  hnps
+# --
++++
+draft = true
++++
+
+${1}

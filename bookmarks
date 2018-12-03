@@ -12,16 +12,6 @@
  (front-context-string . #1="")
  (rear-context-string . #1#)
  (position . 0))
-("Website"
- (filename . "~/Projects/otrenav/website/")
- (front-context-string . #1="")
- (rear-context-string . #1#)
- (position . 0))
-("Dr Teshima"
- (filename . "~/Projects/otrenav/dr-teshima/")
- (front-context-string . #1="")
- (rear-context-string . #1#)
- (position . 0))
 ("Spacemacs"
  (filename . "~/Projects/system/spacemacs/")
  (front-context-string . "spacemacs")

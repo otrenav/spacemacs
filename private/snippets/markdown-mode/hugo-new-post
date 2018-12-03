@@ -1,0 +1,19 @@
+# -*- mode: snippet -*-
+# name: Hugo New Post
+# key:  hnp
+# --
++++
+title = "${1:Title}"
+image = "/img/content/${2:ImagePath}/main.jpg"
+slug = "${3:Slug}"
+date = "${4:Date}"
+draft = true
+tags = [
+    "${5:Tag 1}",
+    "${6:Tag 2}",
+    "${7:Tag 3}",
+]
+promotion = "promotions/r-programming-by-example"
++++
+
+${8}
