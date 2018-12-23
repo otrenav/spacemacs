@@ -7,7 +7,7 @@ title = "${1:Title}"
 image = "/img/content/${2:ImagePath}/main.jpg"
 slug = "${3:Slug}"
 date = "${4:Date}"
-draft = true
+draft = "true"
 tags = [
     "${5:Tag 1}",
     "${6:Tag 2}",
