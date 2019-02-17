@@ -20,13 +20,13 @@ sudo gem install pry pry-doc ruby_parser rubocop
 # Installation
 rm -rf ~/.emacs.d
 rm -rf ~/.spacemacs
-ln -s ~/Projects/system/spacemacs/spacemacs ~/.spacemacs
+ln -s ~/code/system/spacemacs/spacemacs ~/.spacemacs
 
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 rm -rf ~/.emacs.d/private
-ln -s ~/Projects/system/spacemacs/private ~/.emacs.d/private
+ln -s ~/code/system/spacemacs/private ~/.emacs.d/private
 
 rm -rf ~/.emacs.d/.cache/bookmarks
 mkdir ~/.emacs.d/.cache/
-ln -s ~/Projects/system/spacemacs/bookmarks ~/.emacs.d/.cache/bookmarks
+ln -s ~/code/system/spacemacs/bookmarks ~/.emacs.d/.cache/bookmarks

@@ -3,14 +3,11 @@
 (defun dotspacemacs/layers ()
   (setq-default
    dotspacemacs-configuration-layers
-   '(rust
-     sql
-     syntax-checking
+   '(syntax-checking
      emacs-lisp
      markdown
      helm
      yaml
-     csv
      git
      ess
      (html
@@ -69,8 +66,31 @@
      own-html
      own-ess
      )
+   ;;
+   ;; TODO: Look into these already installed packages:
+   ;;
+   ;; - move-text
+   ;; - avy
+   ;; - iedit
+   ;; - expand-region
+   ;; - adaptive-wrap
+   ;; - evil-anzu
+   ;;
    dotspacemacs-enable-lazy-installation 'unused
-   dotspacemacs-excluded-packages '(smartparens ess-R-object-popup)
+   dotspacemacs-excluded-packages '(smartparens ess-R-object-popup
+                                                aggressive-indent-mode pcre2el clean-aindent-mode smartparens hungry-delete
+                                                eval-sexp-fu rainbow-delimiters
+                                                highlight-indentation highlight-numbers
+                                                highlight-parentheses hl-anything linum-relative indent-guide
+                                                volatile-highlights evil-args evil-exchange evil-iedit-share
+                                                evil-indent-textobject evil-jumper evil-lisp-state evil-nerd-commenter
+                                                evil-matchit evil-numbers evil-search-highlight-persist
+                                                evil-terminal-cursor-changer evil-tutor  recentf ace-window
+                                                info+ open-junk-file desktop flx-ido buffer-move window-numbering
+                                                fancy-battery powerline zoom-frm smooth-scrolling vi-tilde-fringe
+                                                golden-ratio auto-dictionary define-word google-translate spray helm-themes
+                                                leuven-theme solarized-theme
+                                                )
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-ask-for-lazy-installation t
    dotspacemacs-distribution 'spacemacs
@@ -169,6 +189,7 @@ package is loaded, you should place your code here."
   (global-git-commit-mode t)
   (global-git-gutter-mode t)
   (global-auto-revert-mode t)
+  (global-centered-cursor-mode t)
 
   (setq-default global-auto-revert-non-file-buffers t)
   (setq-default auto-fill-function 'do-auto-fill)
@@ -193,7 +214,7 @@ package is loaded, you should place your code here."
 
   ;; `hippie-expand' overrides this key binding if it's put inside
   ;; my `own-keybindings' layer, so it goes here to give it priority
-  (global-set-key (kbd "M-/") 'comment-or-uncomment-region)
+  (global-set-key (kbd "C-;") 'comment-or-uncomment-region)
 
   ;; Add standard JavaScript files into React because currently,
   ;; since they share extensions and the indicator at the top of
@@ -205,22 +226,7 @@ package is loaded, you should place your code here."
   (eval-after-load "emmet-mode"
     '(progn (define-key emmet-mode-keymap (kbd "C-j") nil)))
 
-  ;; Hide unnecessary files
-  (setq neo-show-hidden-files nil)
-
-  ;; Change font for Mac OS X
-  ;; (if (eq system-type 'darwin)
-  ;;     (setq-default dotspacemacs-default-font '("Input"
-  ;;                                               :size 16
-  ;;                                               :width normal
-  ;;                                               :weight normal
-  ;;                                               :powerline-scale 1.1)))
   (spacemacs/set-default-font dotspacemacs-default-font))
-(defun dotspacemacs/emacs-custom-settings ()
-  "Emacs custom settings.
-This is an auto-generated function, do not modify its content directly, use
-Emacs customize menu instead.
-This function is called at the very end of Spacemacs initialization."
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -228,11 +234,10 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (yasnippet-snippets yapfify xterm-color web-mode web-beautify tide typescript-mode tagedit tabbar slim-mode shell-pop scss-mode sass-mode pyvenv pytest pyenv-mode py-isort pug-mode prettier-js pippel pip-requirements multi-term multi-line shut-up livid-mode skewer-mode live-py-mode less-css-mode key-seq key-chord json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc importmagic epc concurrent deferred impatient-mode htmlize simple-httpd hy-mode helm-pydoc helm-css-scss helm-company helm-c-yasnippet haml-mode git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter fuzzy flyspell-popup flyspell-correct-helm flyspell-correct eshell-z eshell-prompt-extras esh-help emmet-mode diff-hl cython-mode company-web web-completion-data company-tern dash-functional tern company-statistics company-quickhelp company-anaconda company coffee-mode browse-at-remote auto-yasnippet yasnippet auto-dictionary anaconda-mode pythonic ac-ispell auto-complete yaml-mode ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toml-mode toc-org symon string-inflection sql-indent spaceline-all-the-icons smeargle restart-emacs rainbow-delimiters racer popwin persp-mode pcre2el password-generator paradox overseer org-plus-contrib org-bullets open-junk-file neotree nameless move-text mmm-mode markdown-toc magit-gitflow macrostep lorem-ipsum linum-relative link-hint indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-ag google-translate golden-ratio gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md font-lock+ flycheck-rust flycheck-pos-tip flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu ess-R-data-view elisp-slime-nav editorconfig dumb-jump diminish define-word csv-mode counsel-projectile column-enforce-mode clean-aindent-mode centered-cursor-mode cargo auto-highlight-symbol auto-compile atom-one-dark-theme aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
+    (rainbow-delimiters pcre2el hungry-delete eval-sexp-fu clean-aindent-mode volatile-highlights linum-relative indent-guide highlight-parentheses highlight-numbers parent-mode highlight-indentation evil-exchange evil-args evil-anzu anzu vi-tilde-fringe open-junk-file helm-themes google-translate golden-ratio flx-ido fancy-battery evil-tutor evil-search-highlight-persist highlight evil-numbers evil-nerd-commenter evil-matchit evil-lisp-state smartparens define-word auto-dictionary ace-window ace-link yapfify yaml-mode xterm-color ws-butler winum which-key web-mode web-beautify uuidgen use-package toc-org tide typescript-mode tagedit tabbar spaceline powerline smeargle slim-mode shell-pop scss-mode sass-mode restart-emacs pyvenv pytest pyenv-mode py-isort pug-mode prettier-js popwin pip-requirements persp-mode paradox spinner orgit org-plus-contrib org-bullets neotree multi-term multi-line shut-up move-text mmm-mode markdown-toc markdown-mode magit-gitflow macrostep lorem-ipsum livid-mode skewer-mode simple-httpd live-py-mode link-hint less-css-mode key-seq key-chord json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc hydra hy-mode hl-todo helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make projectile helm-gitignore request helm-flx flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag haml-mode gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy flyspell-popup flyspell-correct-helm flyspell-correct flycheck-pos-tip flycheck pkg-info epl fill-column-indicator eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-surround evil-mc evil-magit magit-popup magit transient git-commit with-editor lv evil-indent-plus evil-iedit-state iedit evil-escape evil-ediff evil goto-chg undo-tree ess-smart-equals ess-R-data-view ctable ess julia-mode eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav dumb-jump diminish diff-hl cython-mode company-web web-completion-data company-tern dash-functional tern company-statistics company-quickhelp pos-tip company-anaconda company column-enforce-mode coffee-mode bind-map bind-key auto-yasnippet yasnippet auto-highlight-symbol auto-compile packed anaconda-mode pythonic f dash s aggressive-indent adaptive-wrap ace-jump-helm-line helm avy helm-core async ac-ispell auto-complete popup atom-one-dark-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
-)
+ '(default ((t (:foreground "#ABB2BF" :background "#282C34")))))
