@@ -74,7 +74,6 @@
    ;; - iedit
    ;; - expand-region
    ;; - adaptive-wrap
-   ;; - evil-anzu
    ;;
    dotspacemacs-enable-lazy-installation 'unused
    dotspacemacs-excluded-packages '(smartparens ess-R-object-popup
