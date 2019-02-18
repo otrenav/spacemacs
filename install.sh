@@ -15,7 +15,6 @@ elif [[ "$unamestr" == 'Darwin' ]]; then
 fi
 sudo npm install -g tern js-beautify eslint jshint typescript tslint typescript-formatter csslint jsonlint
 sudo pip install autoflake hy jedi radon flake8 ipython importmagic epc
-sudo gem install pry pry-doc ruby_parser rubocop
 
 # Installation
 rm -rf ~/.emacs.d
