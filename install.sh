@@ -29,3 +29,4 @@ ln -s ~/code/system/spacemacs/private ~/.emacs.d/private
 rm -rf ~/.emacs.d/.cache/bookmarks
 mkdir ~/.emacs.d/.cache/
 ln -s ~/code/system/spacemacs/bookmarks ~/.emacs.d/.cache/bookmarks
+ln -s ~/code/system/spacemacs/abbrev_defs ~/.emacs.d/.cache/abbrev_defs

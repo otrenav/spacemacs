@@ -2,12 +2,7 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("content"
- (filename . "~/code/omartrejo/content/")
- (front-context-string)
- (rear-context-string . " 00:57 software\n")
- (position . 751))
-("code"
+(("code"
  (filename . "~/code/")
  (front-context-string . "otrenav")
  (rear-context-string . "")
@@ -17,6 +12,11 @@
  (front-context-string . #1="")
  (rear-context-string . #1#)
  (position . 0))
+("content"
+ (filename . "~/code/omartrejo/content/")
+ (front-context-string)
+ (rear-context-string . " 00:57 software\n")
+ (position . 751))
 ("spacemacs"
  (filename . "~/code/system/spacemacs/")
  (front-context-string . "spacemacs")
