@@ -94,7 +94,7 @@
                                                 evil-tutor  recentf ace-window
                                                 info+ open-junk-file desktop
                                                 flx-ido buffer-move window-numbering
-                                                fancy-battery powerline zoom-frm
+                                                fancy-battery zoom-frm
                                                 smooth-scrolling vi-tilde-fringe
                                                 golden-ratio auto-dictionary
                                                 define-word google-translate spray helm-themes
@@ -103,7 +103,7 @@
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-ask-for-lazy-installation t
    dotspacemacs-distribution 'spacemacs
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(minimal)
    dotspacemacs-frozen-packages '()
    dotspacemacs-install-packages 'used-only))
 
@@ -117,10 +117,9 @@ any user code in there besides modifying the variable values."
    dotspacemacs-default-font '("Roboto Mono"
                                :size 20
                                :width normal
-                               :weight normal
-                               :powerline-scale 1.1)
+                               :weight normal)
    dotspacemacs-startup-lists '((recents . 10) (bookmarks . 10))
-   dotspacemacs-themes '(white atom-one-dark spacemacs-light spacemacs-dark)
+   dotspacemacs-themes '(atom-one-dark monokai white)
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-major-mode-emacs-leader-key "C-M-m"
@@ -220,6 +219,10 @@ package is loaded, you should place your code here."
   (global-linum-mode 0)
   (scroll-bar-mode -1)
   (tool-bar-mode -1)
+
+  ;; Reset theme colors before loading next theme
+  (defadvice load-theme (before theme-dont-propagate activate)
+    (mapcar #'disable-theme custom-enabled-themes))
 
   ;; `hippie-expand' overrides this key binding if it's put inside
   ;; my `own-keybindings' layer, so it goes here to give it priority
