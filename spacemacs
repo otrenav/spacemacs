@@ -3,8 +3,7 @@
 (defun dotspacemacs/layers ()
   (setq-default
    dotspacemacs-configuration-layers
-   '(
-     syntax-checking
+   '(syntax-checking
      emacs-lisp
      markdown
      helm
@@ -119,7 +118,7 @@ any user code in there besides modifying the variable values."
                                :width normal
                                :weight normal)
    dotspacemacs-startup-lists '((recents . 10) (bookmarks . 10))
-   dotspacemacs-themes '(atom-one-dark monokai minimal white)
+   dotspacemacs-themes '(less atom-one-dark monokai white)
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-major-mode-emacs-leader-key "C-M-m"
@@ -199,6 +198,7 @@ package is loaded, you should place your code here."
   (global-auto-revert-mode t)
   ;; (global-centered-cursor-mode t)
 
+  (setq-default spaceline-highlight-face-func 'spaceline-highlight-face-evil-state)
   (setq-default global-auto-revert-non-file-buffers t)
   (setq-default auto-fill-function 'do-auto-fill)
   (setq-default select-enable-clipboard t)
@@ -239,17 +239,3 @@ package is loaded, you should place your code here."
     '(progn (define-key emmet-mode-keymap (kbd "C-j") nil)))
 
   (spacemacs/set-default-font dotspacemacs-default-font))
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (minimal-theme yapfify yaml-mode xterm-color ws-butler winum which-key web-mode web-beautify uuidgen use-package toc-org tide tagedit tabbar spaceline smeargle slim-mode shell-pop scss-mode sass-mode restart-emacs pyvenv pytest pyenv-mode py-isort pug-mode prettier-js popwin pip-requirements persp-mode paradox orgit org-bullets neotree multi-term multi-line move-text monokai-theme mmm-mode markdown-toc magit-gitflow macrostep lorem-ipsum livid-mode live-py-mode link-hint less-css-mode key-seq json-mode js2-refactor js-doc hy-mode hl-todo helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gh-md fuzzy flyspell-popup flyspell-correct-helm flycheck-pos-tip fill-column-indicator eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-surround evil-mc evil-magit evil-indent-plus evil-iedit-state evil-escape evil-ediff evil-anzu ess-smart-equals ess-R-data-view eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav dumb-jump diminish diff-hl cython-mode company-web company-tern company-statistics company-quickhelp company-anaconda column-enforce-mode coffee-mode bind-map auto-yasnippet auto-highlight-symbol auto-compile atom-one-dark-theme aggressive-indent adaptive-wrap ace-link ace-jump-helm-line ac-ispell))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:foreground "#ABB2BF" :background "#282C34")))))
