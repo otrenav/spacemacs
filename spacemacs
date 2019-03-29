@@ -112,11 +112,24 @@ This function is called at the very startup of Spacemacs
 initialization before layers configuration. You should not put
 any user code in there besides modifying the variable values."
   (add-to-list 'custom-theme-load-path "~/.emacs.d/private/themes/")
+
+  ;; Font
   (setq-default
-   dotspacemacs-default-font '("Roboto Mono"
+   dotspacemacs-default-font '("Roboto Mono Medium"
                                :size 20
                                :width normal
-                               :weight normal)
+                               :weight normal))
+  (cond ((string-equal system-name "OLAP")
+         (progn
+           (setq-default
+            dotspacemacs-default-font '("Roboto Mono Medium"
+                                        :size 33
+                                        :width normal
+                                        :weight normal))
+           )))
+
+  ;; Others
+  (setq-default
    dotspacemacs-startup-lists '((recents . 10) (bookmarks . 10))
    dotspacemacs-themes '(less atom-one-dark monokai white)
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
