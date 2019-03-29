@@ -95,15 +95,17 @@ by `color-theme-late-night' and the Less is More theme for vim.")
   `(helm-selection ((t (:background "#444444"))))
   `(helm-bookmark-directory ((t (:foreground "#CCCCCC"))))
 
-  ;; Powerline
-  ;; `(powerline-active0 ((t (:foreground "green"))))
-  ;; `(powerline-active1 ((t (:foreground "blue"))))
-  ;; `(powerline-active2 ((t (:foreground "yellow"))))
-  ;; `(powerline-inactive0 ((t (:foreground "green"))))
-  ;; `(powerline-inactive1 ((t (:foreground "blue"))))
-  ;; `(powerline-inactive2 ((t (:foreground "yellow"))))
-  ;; `(spacemacs-normal-face ((t (:inherit 'mode-line :foreground "black"
-  ;; :background "white"))))
+  ;; Markdown
+  `(markdown-header-face-1 ((t (:foreground "cyan" :height 220 :bold t))))
+  `(markdown-header-face-2 ((t (:foreground "yellow" :height 200 :bold t))))
+  `(markdown-header-face-3 ((t (:foreground "orange" :height 180 :bold t))))
+  `(markdown-header-face-4 ((t (:foreground "green" :height 160 :bold t))))
+  `(markdown-header-face-5 ((t (:foreground "white" :height 140 :bold t))))
+  `(markdown-header-face-6 ((t (:foreground "blue" :height 120 :bold t))))
+  `(markdown-inline-code-face ((t (:foreground "orange"))))
+  `(markdown-pre-face ((t (:foreground "cyan"))))
+  `(markdown-italic-face ((t (:italic t))))
+  `(markdown-bold-face ((t (:bold t))))
  )
 
 (provide-theme 'less)
