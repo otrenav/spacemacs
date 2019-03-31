@@ -43,7 +43,7 @@
 (global-unset-key "\C-x\C-z")
 (global-unset-key "\C-x\C-c")
 
-;; (global-set-key (kbd "C-Q")     'own/kill-emacs-client)
+(global-set-key (kbd "C-W")     'own/kill-all-buffers)
 (global-set-key (kbd "C-Q")     'own/kill-buffer-and-frame)
 (global-set-key (kbd "C-+")     'text-scale-increase)
 (global-set-key (kbd "C--")     'text-scale-decrease)
