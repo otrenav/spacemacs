@@ -115,17 +115,11 @@ any user code in there besides modifying the variable values."
 
   ;; Font
   (setq-default
-   dotspacemacs-default-font '("Roboto Mono Medium"
-                               :size 20
-                               :width normal
-                               :weight normal))
+   dotspacemacs-default-font '("Roboto Mono Medium" :size 20))
   (cond ((string-equal system-name "OLAP")
          (progn
            (setq-default
-            dotspacemacs-default-font '("Roboto Mono Medium"
-                                        :size 33
-                                        :width normal
-                                        :weight normal))
+            dotspacemacs-default-font '("Roboto Mono Medium" :size 40))
            )))
 
   ;; Others
@@ -252,3 +246,17 @@ package is loaded, you should place your code here."
     '(progn (define-key emmet-mode-keymap (kbd "C-j") nil)))
 
   (spacemacs/set-default-font dotspacemacs-default-font))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (yapfify yaml-mode xterm-color ws-butler winum which-key web-mode web-beautify uuidgen use-package toc-org tide typescript-mode tagedit tabbar spaceline powerline smeargle slim-mode shell-pop scss-mode sass-mode restart-emacs pyvenv pytest pyenv-mode py-isort pug-mode prettier-js popwin pip-requirements persp-mode paradox spinner orgit org-plus-contrib org-bullets neotree multi-term multi-line shut-up move-text mmm-mode minimal-theme markdown-toc markdown-mode magit-gitflow magit-popup macrostep lorem-ipsum livid-mode skewer-mode simple-httpd live-py-mode link-hint less-css-mode key-seq key-chord json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc hydra hy-mode hl-todo helm-swoop helm-pydoc helm-projectile projectile helm-mode-manager helm-make helm-gitignore request helm-flx flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag haml-mode gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy flyspell-popup flyspell-correct-helm flyspell-correct flycheck-pos-tip flycheck pkg-info epl fill-column-indicator eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-surround evil-mc evil-magit magit transient git-commit with-editor evil-indent-plus evil-iedit-state iedit evil-escape evil-ediff evil-anzu anzu evil goto-chg undo-tree ess-smart-equals ess-R-data-view ctable ess julia-mode eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav dumb-jump diminish diff-hl cython-mode company-web web-completion-data company-tern dash-functional tern company-statistics company-quickhelp pos-tip company-anaconda company column-enforce-mode coffee-mode bind-map bind-key auto-yasnippet yasnippet auto-highlight-symbol auto-compile packed anaconda-mode pythonic f dash s aggressive-indent adaptive-wrap ace-link ace-jump-helm-line helm avy helm-core async ac-ispell auto-complete popup))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
