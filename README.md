@@ -19,6 +19,7 @@ best editor :P), go to: https://www.gnu.org/software/emacs/.
 ## Emacs notes
 
 - `M-x describe-face`: used to find face underneath cursor
+- `M-x list-faces-display`: show faces being used
 - `load-file ENTER ENTER`: used to reload theme
 
 ---

@@ -25,7 +25,8 @@
 
 (defun own/kill-all-buffers ()
   (interactive)
-  (mapc 'kill-buffer (buffer-list)))
+  (mapc 'kill-buffer (buffer-list))
+  (print "Killed all buffers."))
 
 (defun own/kill-emacs-client ()
   "Kill Emacs client by killing all buffers, frames, and windows."
@@ -43,7 +44,7 @@
 (global-unset-key "\C-x\C-z")
 (global-unset-key "\C-x\C-c")
 
-(global-set-key (kbd "C-W")     'own/kill-all-buffers)
+(global-set-key (kbd "C-S-w")   'own/kill-all-buffers)
 (global-set-key (kbd "C-Q")     'own/kill-buffer-and-frame)
 (global-set-key (kbd "C-+")     'text-scale-increase)
 (global-set-key (kbd "C--")     'text-scale-decrease)
