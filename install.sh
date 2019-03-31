@@ -13,6 +13,7 @@ sudo rm /usr/share/applications/emacs25-term.desktop
 
 # Link our own Emacs starter
 mkdir -p /home/otrenav/.local/share/applications/
+rm /home/otrenav/.local/share/applications/emacs25.desktop
 ln -s /home/otrenav/code/system/spacemacs/emacs25.desktop /home/otrenav/.local/share/applications/emacs25.desktop
 
 # Requirements
