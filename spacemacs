@@ -117,7 +117,7 @@ any user code in there besides modifying the variable values."
 
   ;; Font
   (setq-default
-   dotspacemacs-default-font '("Roboto Mono Medium" :size 28))
+   dotspacemacs-default-font '("Roboto Mono Medium" :size 26))
   (cond ((string-equal system-name "OLAP")
          (progn
            (setq-default
@@ -214,6 +214,7 @@ package is loaded, you should place your code here."
   (setq-default auto-fill-function 'do-auto-fill)
   (setq-default select-enable-clipboard t)
   (setq-default scroll-conservatively 101)
+  (setq-default neo-window-fixed-size nil)
   (setq-default neo-show-hidden-files nil)
   (setq-default auto-revert-verbose nil)
   (setq-default indent-tabs-mode nil)
