@@ -217,6 +217,7 @@ package is loaded, you should place your code here."
   (setq-default neo-window-fixed-size nil)
   (setq-default neo-show-hidden-files nil)
   (setq-default auto-revert-verbose nil)
+  (setq-default ess-fancy-comments nil)
   (setq-default indent-tabs-mode nil)
   (setq-default vc-follow-symlinks t)
   (setq-default use-dialog-box nil)
