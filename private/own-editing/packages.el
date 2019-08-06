@@ -57,4 +57,7 @@
 (with-eval-after-load 'key-seq
   (key-seq-define-global "kk" 'avy-goto-char))
 
+(with-eval-after-load 'key-seq
+  (key-seq-define-global ";r" 'anzu-query-replace-at-cursor))
+
 (global-set-key [remap goto-line] 'own/editing/goto-line-with-numbers)
