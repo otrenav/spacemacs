@@ -77,7 +77,7 @@
    ;; - expand-region
    ;; - adaptive-wrap
    ;;
-   dotspacemacs-enable-lazy-installation 'unused
+   dotspacemacs-enable-lazy-installation nil
    dotspacemacs-excluded-packages '(smartparens csv
                                                 ess-R-object-popup
                                                 aggressive-indent-mode pcre2el
@@ -118,7 +118,7 @@ any user code in there besides modifying the variable values."
 
   ;; Font
   (setq-default
-   dotspacemacs-default-font '("Roboto Mono Medium" :size 26))
+   dotspacemacs-default-font '("Roboto Mono Medium" :size 24))
   (cond ((string-equal system-name "OLAP")
          (progn
            (setq-default
