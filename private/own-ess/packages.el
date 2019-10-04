@@ -15,9 +15,9 @@
     (setq-default ess-indent-with-fancy-comments nil)
     (setq-default flycheck-lintr-linters
           (concat "with_defaults(line_length_linter(80), "
-                  ;; "absolute_paths_linter = NULL, "
-                  ;; "camel_case_linter = NULL, "
-                  ;; "snake_case_linter = NULL, "
+                  "absolute_paths_linter = NULL, "
+                  "camel_case_linter = NULL, "
+                  "snake_case_linter = NULL, "
                   "trailing_blank_lines_linter = NULL, "
                   "commented_code_linter = NULL)")))
   (add-hook 'ess-mode-hook 'r-setup)

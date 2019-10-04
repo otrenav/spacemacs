@@ -41,6 +41,7 @@
      (typescript
       :variables
       typescript-fmt-tool 'typescript-formatter
+      typescript-indent-level 2
       typescript-fmt-on-save t)
      (spell-checking
       :variables
