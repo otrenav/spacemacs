@@ -246,6 +246,10 @@ package is loaded, you should place your code here."
   ;; my `own-keybindings' layer, so it goes here to give it priority
   (global-set-key (kbd "C-;") 'comment-or-uncomment-region)
 
+  ;; `hippie-expand` overrides this key binding if it's put inside
+  ;; my `own-keybindings` layer, so it goes here to give it priority
+  (global-set-key (kbd "M-/")     'helm-projectile-grep)
+
   ;; Add standard JavaScript files into React because currently,
   ;; since they share extensions and the indicator at the top of
   ;; the file is deprecated, there's no other way to detect files
@@ -262,10 +266,40 @@ package is loaded, you should place your code here."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ansi-color-names-vector
+   [("#181818" . "#282828")
+    ("#ab4642" . "#dc9656")
+    ("#a1b56c" . "#383838")
+    ("#f7ca88" . "#383838")
+    ("#7cafc2" . "#585858")
+    ("#ab4642" . "#b8b8b8")
+    ("#86c1b9" . "#d8d8d8")
+    ("#ffffff" . "#ffffff")])
+ '(ansi-term-color-vector
+   [unspecified "#2d2a2e" "#ff6188" "#a9dc76" "#ffd866" "#78dce8" "#ab9df2" "#ff6188" "#fcfcfa"])
+ '(custom-safe-themes
+   (quote
+    ("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "4780d7ce6e5491e2c1190082f7fe0f812707fc77455616ab6f8b38e796cbffa9" "930f7841c24772dda4f22291e510dac1d58813b59dcb9f54ad4f1943ea89cdcd" default)))
  '(evil-want-Y-yank-to-eol nil)
  '(package-selected-packages
    (quote
-    (lv flycheck-rust toml-mode racer cargo rust-mode yapfify yaml-mode xterm-color ws-butler winum which-key web-mode web-beautify uuidgen use-package toc-org tide typescript-mode tagedit tabbar spaceline powerline smeargle slim-mode shell-pop scss-mode sass-mode restart-emacs pyvenv pytest pyenv-mode py-isort pug-mode prettier-js popwin pip-requirements persp-mode paradox spinner orgit org-plus-contrib org-bullets neotree multi-term multi-line shut-up move-text mmm-mode minimal-theme markdown-toc markdown-mode magit-gitflow magit-popup macrostep lorem-ipsum livid-mode skewer-mode simple-httpd live-py-mode link-hint less-css-mode key-seq key-chord json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc hydra hy-mode hl-todo helm-swoop helm-pydoc helm-projectile projectile helm-mode-manager helm-make helm-gitignore request helm-flx flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag haml-mode gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy flyspell-popup flyspell-correct-helm flyspell-correct flycheck-pos-tip flycheck pkg-info epl fill-column-indicator eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-surround evil-mc evil-magit magit transient git-commit with-editor evil-indent-plus evil-iedit-state iedit evil-escape evil-ediff evil-anzu anzu evil goto-chg undo-tree ess-smart-equals ess-R-data-view ctable ess julia-mode eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav dumb-jump diminish diff-hl cython-mode company-web web-completion-data company-tern dash-functional tern company-statistics company-quickhelp pos-tip company-anaconda company column-enforce-mode coffee-mode bind-map bind-key auto-yasnippet yasnippet auto-highlight-symbol auto-compile packed anaconda-mode pythonic f dash s aggressive-indent adaptive-wrap ace-link ace-jump-helm-line helm avy helm-core async ac-ispell auto-complete popup))))
+    (monokai-pro-theme lv flycheck-rust toml-mode racer cargo rust-mode yapfify yaml-mode xterm-color ws-butler winum which-key web-mode web-beautify uuidgen use-package toc-org tide typescript-mode tagedit tabbar spaceline powerline smeargle slim-mode shell-pop scss-mode sass-mode restart-emacs pyvenv pytest pyenv-mode py-isort pug-mode prettier-js popwin pip-requirements persp-mode paradox spinner orgit org-plus-contrib org-bullets neotree multi-term multi-line shut-up move-text mmm-mode minimal-theme markdown-toc markdown-mode magit-gitflow magit-popup macrostep lorem-ipsum livid-mode skewer-mode simple-httpd live-py-mode link-hint less-css-mode key-seq key-chord json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc hydra hy-mode hl-todo helm-swoop helm-pydoc helm-projectile projectile helm-mode-manager helm-make helm-gitignore request helm-flx flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag haml-mode gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy flyspell-popup flyspell-correct-helm flyspell-correct flycheck-pos-tip flycheck pkg-info epl fill-column-indicator eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-surround evil-mc evil-magit magit transient git-commit with-editor evil-indent-plus evil-iedit-state iedit evil-escape evil-ediff evil-anzu anzu evil goto-chg undo-tree ess-smart-equals ess-R-data-view ctable ess julia-mode eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav dumb-jump diminish diff-hl cython-mode company-web web-completion-data company-tern dash-functional tern company-statistics company-quickhelp pos-tip company-anaconda company column-enforce-mode coffee-mode bind-map bind-key auto-yasnippet yasnippet auto-highlight-symbol auto-compile packed anaconda-mode pythonic f dash s aggressive-indent adaptive-wrap ace-link ace-jump-helm-line helm avy helm-core async ac-ispell auto-complete popup)))
+ '(vc-annotate-background "#ffffff")
+ '(vc-annotate-color-map
+   (quote
+    ((20 . "#ab4642")
+     (50 . "#dc9656")
+     (80 . "#f7ca88")
+     (110 . "#a1b56c")
+     (140 . "#86c1b9")
+     (170 . "#7cafc2")
+     (200 . "#ab4642")
+     (230 . "#a16046")
+     (260 . "#181818")
+     (290 . "#282828")
+     (320 . "#383838")
+     (350 . "#585858"))))
+ '(vc-annotate-very-old-color "#585858"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
