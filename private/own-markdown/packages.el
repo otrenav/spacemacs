@@ -6,6 +6,7 @@
   (use-package markdown-mode
     :defer
     :bind (:map markdown-mode-map
+                ("TAB" . tab-to-tab-stop)
                 ("M-p" . own/editing/move-line-up)
                 ("M-n" . own/editing/move-line-down))))
 
