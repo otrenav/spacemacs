@@ -7,8 +7,8 @@
 ;; TODO: Indent region   (M-m j =)
 
 (defconst own-keybindings-packages
-  '(key-chord
-    key-seq))
+  '(key-seq
+    key-chord))
 
 (defun own-keybindings/init-key-chord ()
   ;; The key-chord's package bindings are symmetrical

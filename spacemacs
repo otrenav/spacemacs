@@ -4,12 +4,11 @@
   (setq-default
    dotspacemacs-configuration-layers
    '(
-     syntax-checking
+     syntax-checking  ;; Prefixes: e, t
      emacs-lisp
      markdown
      helm
      yaml
-     rust
      git
      ess
      (html
@@ -43,7 +42,7 @@
       typescript-fmt-tool 'typescript-formatter
       typescript-indent-level 2
       typescript-fmt-on-save t)
-     (spell-checking
+     (spell-checking  ;; Prefixes: s
       :variables
       enable-flyspell-auto-completion t
       spell-checking-enable-by-default nil
@@ -245,10 +244,7 @@ package is loaded, you should place your code here."
   ;; `hippie-expand' overrides this key binding if it's put inside
   ;; my `own-keybindings' layer, so it goes here to give it priority
   (global-set-key (kbd "C-;") 'comment-or-uncomment-region)
-
-  ;; `hippie-expand` overrides this key binding if it's put inside
-  ;; my `own-keybindings` layer, so it goes here to give it priority
-  (global-set-key (kbd "M-/")     'helm-projectile-grep)
+  (global-set-key (kbd "M-/") 'helm-projectile-grep)
 
   ;; Add standard JavaScript files into React because currently,
   ;; since they share extensions and the indicator at the top of
