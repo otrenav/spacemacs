@@ -1,4 +1,4 @@
-;; -*- mode: emacs-lisp -*-
+:;; -*- mode: emacs-lisp -*-
 
 (defun dotspacemacs/layers ()
   (setq-default
@@ -11,6 +11,13 @@
      yaml
      git
      ess
+     (vue
+      :variables
+      vue-backed 'dumb)
+     (neotree
+      :variables
+      neo-theme 'arrow
+      neo-vc-integration '(face))
      (html
       :variables
       css-indent-offset 2
@@ -66,7 +73,6 @@
      own-helm
      own-yaml
      own-html
-     own-vue
      own-ess
      )
    ;;
@@ -129,7 +135,8 @@ any user code in there besides modifying the variable values."
   ;; Others
   (setq-default
    dotspacemacs-startup-lists '((recents . 10) (bookmarks . 10))
-   dotspacemacs-themes '(less atom-one-dark monokai white)
+   ;; dotspacemacs-themes '(less atom-one-dark monokai white)
+   dotspacemacs-themes '(monokai atom-one-dark white)
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-major-mode-emacs-leader-key "C-M-m"
@@ -205,7 +212,6 @@ package is loaded, you should place your code here."
 
   (global-company-mode)
   (global-git-commit-mode t)
-  (global-git-gutter-mode t)
   (global-auto-revert-mode t)
 
   (setq-default neo-hidden-regexp-list '("^\\." "\\.cs\\.meta$" "\\.pyc$" "~$"
@@ -228,6 +234,13 @@ package is loaded, you should place your code here."
   (setq-default truncate-lines t)
   (setq-default fill-column 80)
   (setq-default tab-width 4)
+
+  (setq-default web-mode-markup-indent-offset 2)
+  (setq-default web-mode-code-indent-offset 2)
+  (setq-default web-mode-attr-indent-offset 2)
+  (setq-default web-mode-css-indent-offset 2)
+  (setq-default web-mode-script-padding 2)
+  (setq-default css-indent-offset 2)
 
   (set-keyboard-coding-system 'utf-8)
   (prefer-coding-system 'utf-8)

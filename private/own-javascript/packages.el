@@ -6,8 +6,6 @@
 (defconst own-javascript-packages
   '(prettier-js))
 
-(defun own-javascript/init-prettier-js ())
-
 (defun own-javascript/pre-init-prettier-js ()
   (require 'prettier-js)
   (add-hook 'js2-mode-hook 'prettier-js-mode)

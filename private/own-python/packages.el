@@ -10,6 +10,12 @@
 (defconst own-python-packages
   '(anaconda-mode (blacken :location local)))
 
+(defun own-python/pre-init-blacken ()
+  (use-package blacken
+    :config
+    :defer
+    (add-hook 'python-mode-hook 'blacken-mode)))
+
 (defun own-python/post-init-anaconda-mode ()
   ;; TODO: Add the following keybindings:
   ;; ("r" anaconda-mode-find-references  "References")
@@ -18,10 +24,3 @@
   ;; ("o" anaconda-mode-show-doc         "Documentation")
   ;; ("b" anaconda-mode-go-back          "Go back"))
   )
-
-(defun own-python/pre-init-blacken ()
-  (require 'blacken)
-  (add-hook 'python-mode-hook 'blacken-mode)
-  )
-
-(defun own-python/init-blacken ())
