@@ -32,7 +32,7 @@ rm -rf ~/.emacs.d
 rm -rf ~/.spacemacs
 ln -s ~/code/system/spacemacs/spacemacs ~/.spacemacs
 
-git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 rm -rf ~/.emacs.d/private
 ln -s ~/code/system/spacemacs/private ~/.emacs.d/private
