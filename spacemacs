@@ -25,10 +25,6 @@
       web-mode-code-indent-offset 2
       web-mode-attr-indent-offset 2
       web-mode-markup-indent-offset 2)
-     (react
-      :variables
-      js-indent-level 2
-      js2-basic-offset 2)
      (javascript
       :variables
       js-indent-level 2
@@ -86,6 +82,7 @@
    ;;
    dotspacemacs-enable-lazy-installation nil
    dotspacemacs-excluded-packages '(smartparens csv
+                                                iswitchb
                                                 ess-R-object-popup
                                                 aggressive-indent-mode pcre2el
                                                 clean-aindent-mode smartparens hungry-delete
@@ -255,18 +252,18 @@ package is loaded, you should place your code here."
   (defadvice load-theme (before theme-dont-propagate activate)
     (mapcar #'disable-theme custom-enabled-themes))
 
+  ;; Override theme faces as needed
+  (custom-theme-set-faces 'monokai
+                          '(markdown-italic-face ((t (:foreground "#e6db74")))))
+
   ;; `hippie-expand' overrides this key binding if it's put inside
   ;; my `own-keybindings' layer, so it goes here to give it priority
   (global-set-key (kbd "C-;") 'comment-or-uncomment-region)
   (global-set-key (kbd "M-/") 'helm-projectile-grep)
 
-  ;; Add standard JavaScript files into React because currently,
-  ;; since they share extensions and the indicator at the top of
-  ;; the file is deprecated, there's no other way to detect files
-  (add-to-list 'auto-mode-alist '("\\.js\\'" . react-mode))
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
 
-  ;; Remove emmet-mode keybindings (emmet-mode must be enabled for
-  ;; React to work correctly, but its keybindings are not useful)
+  ;; Remove emmet-mode keybindings
   (eval-after-load "emmet-mode"
     '(progn (define-key emmet-mode-keymap (kbd "C-j") nil)))
 
