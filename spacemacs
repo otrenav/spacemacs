@@ -253,6 +253,8 @@ package is loaded, you should place your code here."
     (mapcar #'disable-theme custom-enabled-themes))
 
   ;; Override theme faces as needed
+  ;; To find out the face under the cursor: C-u C-x =
+  ;; which is `what-cursor-position` with a prefix
   (custom-theme-set-faces 'monokai
                           '(markdown-italic-face ((t (:foreground "#e6db74")))))
 
