@@ -12,11 +12,7 @@ sudo rm /usr/share/applications/emacs.desktop
 sudo rm /usr/share/applications/emacs25.desktop
 sudo rm /usr/share/applications/emacs-term.desktop
 sudo rm /usr/share/applications/emacs25-term.desktop
-
-# Link our own Emacs starter
-mkdir -p /home/otrenav/.local/share/applications/
-rm /home/otrenav/.local/share/applications/emacs25.desktop
-ln -s /home/otrenav/code/system/spacemacs/emacs25.desktop /home/otrenav/.local/share/applications/emacs25.desktop
+sudo cp /home/otrenav/code/system/spacemacs/emacs.desktop /usr/share/applications/emacs.desktop
 
 # Requirements
 if [[ "$unamestr" == 'Linux' ]]; then
