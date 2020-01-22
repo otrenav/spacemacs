@@ -1,25 +1,40 @@
-;;;; Emacs Bookmark Format Version 1 ;;;;
+;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8-emacs -*-
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
 (("code"
- (filename . "~/code/")
- (front-context-string . "otrenav")
- (rear-context-string . "")
- (position . 331))
-("downloads"
- (filename . "~/downloads/")
- (front-context-string . #1="")
- (rear-context-string . #1#)
- (position . 0))
-("content"
- (filename . "~/code/omartrejo/content/")
- (front-context-string)
- (rear-context-string . " 00:57 software\n")
- (position . 751))
-("spacemacs"
- (filename . "~/code/system/spacemacs/")
- (front-context-string . "spacemacs")
- (rear-context-string . "")
- (position . 523))
-)
+  (filename . "~/code/")
+  (front-context-string)
+  (rear-context-string)
+  (position . 0))
+ ("blog"
+  (filename . "~/blog/")
+  (front-context-string)
+  (rear-context-string)
+  (position . 0))
+ ("notes"
+  (filename . "~/notes/")
+  (front-context-string)
+  (rear-context-string)
+  (position . 0))
+ ("videos"
+  (filename . "~/videos/")
+  (front-context-string)
+  (rear-context-string)
+  (position . 0))
+ ("downloads"
+  (filename . "~/downloads/")
+  (front-context-string)
+  (rear-context-string)
+  (position . 0))
+ ("system"
+  (filename . "~/code/system/")
+  (front-context-string)
+  (rear-context-string)
+  (position . 0))
+ ("spacemacs"
+  (filename . "~/code/system/spacemacs/")
+  (front-context-string)
+  (rear-context-string)
+  (position . 0))
+ )

@@ -262,6 +262,7 @@ package is loaded, you should place your code here."
   ;; my `own-keybindings' layer, so it goes here to give it priority
   (global-set-key (kbd "C-;") 'comment-or-uncomment-region)
   (global-set-key (kbd "M-/") 'helm-projectile-grep)
+  (global-set-key (kbd "C-M-f") 'mark-defun)
 
   (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
 
