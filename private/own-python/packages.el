@@ -8,7 +8,7 @@
 ;;
 
 (defconst own-python-packages
-  '(anaconda-mode (blacken :location local)))
+  '(anaconda-mode (blacken)))
 
 (defun own-python/pre-init-blacken ()
   (use-package blacken

@@ -11,4 +11,8 @@
                 ("M-n" . own/editing/move-line-down))))
 
 (defun own-markdown/post-init-markdown-mode ()
+  (add-hook 'markdown-mode-hook
+            (lambda ()
+              (define-key markdown-mode-map (kbd "C-M-q")
+                'own/editing/fill-region-as-paragraph)))
   (add-to-list 'auto-mode-alist '("\\.Rmd" . markdown-mode)))
