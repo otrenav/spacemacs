@@ -153,3 +153,10 @@ If there's a region, all lines that region covers will be duplicated."
   (while (re-search-forward "\r$" nil t)
     (replace-match ""))
   (set-buffer-file-coding-system 'utf-8))
+
+(defun own/editing/fill-region-as-paragraph ()
+  (interactive)
+  (require 'expand-region)
+  (er/mark-text-paragraph)
+  (fill-region-as-paragraph (region-beginning) (region-end))
+  )

@@ -77,7 +77,6 @@
    ;; - move-text
    ;; - avy
    ;; - iedit
-   ;; - expand-region
    ;; - adaptive-wrap
    ;;
    dotspacemacs-enable-lazy-installation nil
