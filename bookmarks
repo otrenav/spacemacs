@@ -7,21 +7,6 @@
   (front-context-string)
   (rear-context-string)
   (position . 0))
- ("blog"
-  (filename . "~/projects/blog/")
-  (front-context-string)
-  (rear-context-string)
-  (position . 0))
- ("notes"
-  (filename . "~/projects/notes/")
-  (front-context-string)
-  (rear-context-string)
-  (position . 0))
- ("videos"
-  (filename . "~/videos/")
-  (front-context-string)
-  (rear-context-string)
-  (position . 0))
  ("downloads"
   (filename . "~/downloads/")
   (front-context-string)
@@ -34,6 +19,11 @@
   (position . 0))
  ("spacemacs"
   (filename . "~/projects/system/spacemacs/")
+  (front-context-string)
+  (rear-context-string)
+  (position . 0))
+ ("videos"
+  (filename . "~/videos/")
   (front-context-string)
   (rear-context-string)
   (position . 0))
