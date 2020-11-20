@@ -11,4 +11,6 @@
   (add-hook 'js2-mode-hook 'prettier-js-mode)
   (add-hook 'react-mode-hook 'prettier-js-mode))
 
-(defun own-javascript/init-rjsx-mode ())
+(defun own-javascript/init-rjsx-mode ()
+  (require 'rjsx-mode)
+  (setq js2-strict-missing-semi-warning nil))

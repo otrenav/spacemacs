@@ -8,12 +8,13 @@
 ;;
 
 (defconst own-python-packages
-  '(anaconda-mode (blacken)))
+  '(anaconda-mode blacken))
 
 (defun own-python/pre-init-blacken ()
   (use-package blacken
+    :after python
+    :demand t
     :config
-    :defer
     (add-hook 'python-mode-hook 'blacken-mode)))
 
 (defun own-python/post-init-anaconda-mode ()
