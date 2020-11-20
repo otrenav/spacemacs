@@ -125,7 +125,7 @@ any user code in there besides modifying the variable values."
   (cond ((string-equal system-name "OLAP")
          (progn
            (setq-default
-            dotspacemacs-default-font '("Roboto Mono Medium" :size 18))
+            dotspacemacs-default-font '("Roboto Mono Medium" :size 32))
            )))
 
   ;; Others
