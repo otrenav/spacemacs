@@ -1,5 +1,7 @@
 
-| [Website](https://links.otrenav.com/website) | [Twitter](https://links.otrenav.com/twitter) | [LinkedIn](https://links.otrenav.com/linkedin)  | [GitHub](https://links.otrenav.com/github) | [GitLab](https://links.otrenav.com/gitlab) | [CodeMentor](https://links.otrenav.com/codementor) |
+[Delta Lab](https://links.deltalab.ai/website) | [Twitter](https://links.deltalab.ai/twitter) | [LinkedIn](https://links.deltalab.ai/linkedin)
+
+---
 
 # Spacemacs Configuration
 
@@ -24,6 +26,5 @@ best editor :P), go to: https://www.gnu.org/software/emacs/.
 
 ---
 
-> "The best ideas are common property."
->
-> —Seneca
+> "We are the people we have been waiting for."
+
