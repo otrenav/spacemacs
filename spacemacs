@@ -4,7 +4,8 @@
   (setq-default
    dotspacemacs-configuration-layers
    '(
-     syntax-checking  ;; Prefixes: e, t
+     ;; Ignored because it raises unnecessary warnings for Python
+     ;; syntax-checking  ;; Prefixes: e, t
      emacs-lisp
      markdown
      helm
