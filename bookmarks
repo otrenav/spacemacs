@@ -12,11 +12,6 @@
   (front-context-string)
   (rear-context-string)
   (position . 0))
- ("system"
-  (filename . "~/projects/system/")
-  (front-context-string)
-  (rear-context-string)
-  (position . 0))
  ("spacemacs"
   (filename . "~/projects/system/spacemacs/")
   (front-context-string)
