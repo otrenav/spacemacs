@@ -12,7 +12,7 @@ sudo cp /home/otrenav/projects/system/spacemacs/emacs.desktop /usr/share/applica
 # Requirements
 sudo apt install hunspell aspell pylint tidy
 npm install -g tern js-beautify eslint jshint typescript eslint typescript-formatter csslint jsonlint
-sudo pip3 install autoflake hy jedi radon flake8 ipython importmagic epc
+sudo pip3 install autoflake hy jedi radon flake8 flake8-polyfill ipython importmagic epc
 
 # Installation
 rm -rf ~/.emacs.d

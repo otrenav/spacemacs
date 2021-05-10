@@ -207,7 +207,6 @@ package is loaded, you should place your code here."
   (require 'helm-bookmark)
 
   (global-company-mode)
-  (global-git-commit-mode t)
   (global-auto-revert-mode t)
 
   (setq-default neo-hidden-regexp-list '("^\\." "\\.cs\\.meta$" "\\.pyc$" "~$"

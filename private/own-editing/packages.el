@@ -7,18 +7,11 @@
 ;;
 
 (defconst own-editing-packages
-  ;; TODO: test "pandoc" package
   '(align
-    multi-line
     whitespace
     auto-highlight-symbol))
 
 (defun own-editing/init-align ())
-
-(defun own-editing/init-multi-line ()
-  (use-package multi-line
-    :defer
-    :bind ("M-j" . multi-line)))
 
 (defun own-editing/post-init-whitespace ()
   (setq-default system-time-locale "C")
