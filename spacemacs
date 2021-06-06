@@ -4,7 +4,7 @@
   (setq-default
    dotspacemacs-configuration-layers
    '(
-     syntax-checking  ;; Prefixes: e, t
+     ;; syntax-checking  ;; Prefixes: e, t
      emacs-lisp
      markdown
      helm
@@ -125,7 +125,7 @@ any user code in there besides modifying the variable values."
   (cond ((string-equal system-name "OLAP")
          (progn
            (setq-default
-            dotspacemacs-default-font '("Roboto Mono Medium" :size 32))
+            dotspacemacs-default-font '("Roboto Mono Medium" :size 22))
            )))
 
   ;; Others
