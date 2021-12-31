@@ -4,7 +4,7 @@
   (setq-default
    dotspacemacs-configuration-layers
    '(
-     syntax-checking  ;; Prefixes: e, t
+     ;; syntax-checking  ;; Prefixes: e, t
      emacs-lisp
      markdown
      helm
@@ -35,16 +35,16 @@
       shell-default-height 30)
      (version-control
       :variables
-      version-control-diff-tool 'diff-hl
-      version-control-global-margin t)
+      version-control-global-margin t
+      version-control-diff-tool 'diff-hl)
      (python
       :variables
       python-test-runner 'pytest)
      (typescript
       :variables
-      typescript-fmt-tool 'typescript-formatter
+      typescript-fmt-on-save t
       typescript-indent-level 2
-      typescript-fmt-on-save t)
+      typescript-fmt-tool 'typescript-formatter)
      (spell-checking  ;; Prefixes: s
       :variables
       enable-flyspell-auto-completion t
@@ -69,6 +69,7 @@
      own-helm
      own-yaml
      own-html
+     own-git
      own-ess
      )
    ;;
@@ -83,6 +84,8 @@
    dotspacemacs-excluded-packages '(smartparens csv
                                                 iswitchb
                                                 ess-R-object-popup
+                                                undo-tree ;; Retest/Re-add
+                                                paradox@spacemacs-navigation ;; Retest/Re-add
                                                 aggressive-indent-mode pcre2el
                                                 clean-aindent-mode smartparens hungry-delete
                                                 eval-sexp-fu rainbow-delimiters
@@ -108,7 +111,7 @@
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-ask-for-lazy-installation t
    dotspacemacs-distribution 'spacemacs
-   dotspacemacs-additional-packages '(minimal-theme)
+   dotspacemacs-additional-packages '()
    dotspacemacs-frozen-packages '()
    dotspacemacs-install-packages 'used-only))
 
@@ -117,6 +120,7 @@
 This function is called at the very startup of Spacemacs
 initialization before layers configuration. You should not put
 any user code in there besides modifying the variable values."
+  ;; (setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
   (add-to-list 'custom-theme-load-path "~/.emacs.d/private/themes/")
 
   ;; Font
@@ -204,6 +208,10 @@ initialization after layers configuration. This is the place
 where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a
 package is loaded, you should place your code here."
+
+  ;; (define-key magit-hunk-section-map (kbd "RET") 'magit-diff-visit-file-other-window)
+  ;; (define-key magit-file-section-map (kbd "RET") 'magit-diff-visit-file-other-window)
+
   (require 'helm-bookmark)
 
   (global-company-mode)
@@ -298,7 +306,7 @@ package is loaded, you should place your code here."
   ;; `hippie-expand' overrides this key binding if it's put inside
   ;; my `own-keybindings' layer, so it goes here to give it priority
   (global-set-key (kbd "C-;") 'comment-or-uncomment-region)
-  (global-set-key (kbd "M-/") 'helm-projectile-grep)
+  (global-set-key (kbd "M-/") 'helm-projectile-ag)
   (global-set-key (kbd "C-M-f") 'mark-defun)
 
   (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
