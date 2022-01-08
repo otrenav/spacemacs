@@ -108,12 +108,13 @@
                                                 define-word google-translate spray helm-themes
                                                 leuven-theme solarized-theme
                                                 )
+   dotspacemacs-additional-packages '(xclip)
    dotspacemacs-configuration-layer-path '()
+   dotspacemacs-install-packages 'used-only)
    dotspacemacs-ask-for-lazy-installation t
    dotspacemacs-distribution 'spacemacs
-   dotspacemacs-additional-packages '()
    dotspacemacs-frozen-packages '()
-   dotspacemacs-install-packages 'used-only))
+  )
 
 (defun dotspacemacs/init ()
   "Initialization function.
@@ -214,6 +215,7 @@ package is loaded, you should place your code here."
 
   (require 'helm-bookmark)
 
+  (xclip-mode 1)
   (global-company-mode)
   (global-auto-revert-mode t)
 
@@ -269,45 +271,28 @@ package is loaded, you should place your code here."
                           `(markdown-header-face-3 ((t (:foreground "#FF8C00" :height ,monokai-height-plus-2 :inherit markdown-header-face))))
                           `(markdown-header-face-4 ((t (:foreground "#AF87FF" :height ,monokai-height-plus-1 :inherit markdown-header-face)))))
 
-   ;; `(markdown-header-face-1
-   ;;   ((,monokai-class (:inherit markdown-header-face
-   ;;                              :height ,monokai-height-plus-4))
-   ;;    (,monokai-256-class (:inherit markdown-header-face
-   ;;                                   :height ,monokai-height-plus-4))))
-
-   ;; `(markdown-header-face-2
-   ;;   ((,monokai-class (:inherit markdown-header-face
-   ;;                              :height ,monokai-height-plus-3))
-   ;;    (,monokai-256-class (:inherit markdown-header-face
-   ;;                                   :height ,monokai-height-plus-3))))
-
-   ;; `(markdown-header-face-3
-   ;;   ((,monokai-class (:inherit markdown-header-face
-   ;;                              :height ,monokai-height-plus-2))
-   ;;    (,monokai-256-class (:inherit markdown-header-face
-   ;;                                   :height ,monokai-height-plus-2))))
-
-   ;; `(markdown-header-face-4
-   ;;   ((,monokai-class (:inherit markdown-header-face
-   ;;                              :height ,monokai-height-plus-1))
-   ;;    (,monokai-256-class (:inherit markdown-header-face
-   ;;                                   :height ,monokai-height-plus-1))))
-
-   ;; - monokai-256-yellow         "#CDC673"
-  ;; - monokai-256-orange         "#FF8C00"
-  ;; - monokai-256-red            "#FF1493"
-  ;; - monokai-256-magenta        "#D700D7"
-  ;; - monokai-256-violet         "#AF87FF"
-  ;; - monokai-256-blue           "#5FD7FF"
-  ;; - monokai-256-cyan           "#5FFFFF"
-  ;; - monokai-256-green          "#87D700"
-  ;; - monokai-256-gray           "#3D3D3D"
-
   ;; `hippie-expand' overrides this key binding if it's put inside
   ;; my `own-keybindings' layer, so it goes here to give it priority
-  (global-set-key (kbd "C-;") 'comment-or-uncomment-region)
-  (global-set-key (kbd "M-/") 'helm-projectile-ag)
-  (global-set-key (kbd "C-M-f") 'mark-defun)
+
+  (global-unset-key "\C-x\C-z")
+  (global-unset-key "\C-x\o")
+
+  (global-unset-key "\M-r")
+  (global-set-key (kbd "M-r")     'anzu-query-replace-at-cursor)
+
+  (global-unset-key "\C-o")
+  (global-set-key (kbd "C-o")     'other-window)
+
+  (global-set-key (kbd "C-\\")    'comment-or-uncomment-region)
+  (global-set-key (kbd "C-Q")     'spacemacs/prompt-kill-emacs)
+  (global-set-key (kbd "C-S-w")   'own/kill-all-buffers)
+  (global-set-key (kbd "C-+")     'text-scale-increase)
+  (global-set-key (kbd "C--")     'text-scale-decrease)
+  (global-set-key (kbd "C-M-f")   'mark-defun)
+
+  (global-set-key (kbd "C-M-/")   'helm-projectile-find-file)
+  (global-set-key (kbd "M-/")     'helm-projectile-ag)
+
 
   (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
 
@@ -316,3 +301,23 @@ package is loaded, you should place your code here."
     '(progn (define-key emmet-mode-keymap (kbd "C-j") nil)))
 
   (spacemacs/set-default-font dotspacemacs-default-font))
+(defun dotspacemacs/emacs-custom-settings ()
+  "Emacs custom settings.
+This is an auto-generated function, do not modify its content directly, use
+Emacs customize menu instead.
+This function is called at the very end of Spacemacs initialization."
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(evil-want-Y-yank-to-eol nil)
+ '(package-selected-packages
+   '(xclip clipetty yasnippet-snippets yapfify yaml-mode xterm-color ws-butler writeroom-mode winum white-theme which-key web-mode web-beautify vterm uuidgen use-package toc-org tide terminal-here tagedit tabbar symon symbol-overlay string-inflection string-edit sphinx-doc spaceline-all-the-icons smeargle slim-mode shell-pop scss-mode sass-mode rjsx-mode restart-emacs quickrun pytest pyenv-mode py-isort pug-mode prettier-js popwin poetry pippel pipenv pip-requirements persp-mode password-generator paradox overseer org-superstar npm-mode nose nodejs-repl neotree nameless multi-term multi-line monokai-theme mmm-mode markdown-toc macrostep lorem-ipsum livid-mode live-py-mode link-hint key-seq json-navigator json-mode js2-refactor js-doc importmagic impatient-mode hybrid-mode hl-todo helm-xref helm-swoop helm-pydoc helm-purpose helm-projectile helm-org helm-mode-manager helm-make helm-ls-git helm-gitignore helm-git-grep helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag gitignore-templates gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md fuzzy forge font-lock+ flyspell-popup flyspell-correct-helm flycheck-package flycheck-elsa eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-textobj-line evil-surround evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-escape evil-ediff evil-collection evil-cleverparens evil-anzu ess-R-data-view eshell-z eshell-prompt-extras esh-help emr emmet-mode elisp-slime-nav editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish diff-hl cython-mode company-web company-statistics company-quickhelp company-anaconda column-enforce-mode centered-cursor-mode browse-at-remote blacken bind-map auto-yasnippet auto-highlight-symbol auto-compile atom-one-dark-theme aggressive-indent ace-link ace-jump-helm-line ac-ispell)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+)

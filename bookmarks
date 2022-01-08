@@ -2,13 +2,8 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("projects-code"
-  (filename . "~/projects/")
-  (front-context-string)
-  (rear-context-string)
-  (position . 0))
- ("projects-drive"
-  (filename . "~/drive/work/projects/")
+(("code"
+  (filename . "~/code/")
   (front-context-string)
   (rear-context-string)
   (position . 0))
