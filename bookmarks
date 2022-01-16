@@ -12,4 +12,9 @@
   (front-context-string)
   (rear-context-string)
   (position . 0))
+ ("TODOs"
+  (filename . "~/drive/drive/shared/TODO.md")
+  (front-context-string)
+  (rear-context-string)
+  (position . 0))
  )
