@@ -37,8 +37,8 @@
   (front-context-string)
   (rear-context-string)
   (position . 0))
- ("TODOs - AYRW"
-  (filename . "~/drive/mllabs/projects/pm/ayrw/notes/TODOs.md")
+ ("TODOs - AYR"
+  (filename . "~/drive/mllabs/projects/pm/ayr/notes/TODOs.md")
   (front-context-string)
   (rear-context-string)
   (position . 0))
