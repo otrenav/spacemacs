@@ -292,9 +292,8 @@ package is loaded, you should place your code here."
   (global-set-key (kbd "C--")     'text-scale-decrease)
   (global-set-key (kbd "C-M-f")   'mark-defun)
 
-  (global-set-key (kbd "C-M-/")   'helm-projectile-find-file)
   (global-set-key (kbd "M-/")     'helm-projectile-ag)
-
+  (global-set-key (kbd "C-M-/")   'helm-projectile-find-file)
 
   (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode))
 
