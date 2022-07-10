@@ -80,9 +80,9 @@
    ;; - iedit
    ;; - adaptive-wrap
    ;;
+   dotspacemacs-additional-packages '(xclip cmake-mode)
    dotspacemacs-ask-for-lazy-installation t
    dotspacemacs-enable-lazy-installation nil
-   dotspacemacs-additional-packages '(xclip)
    dotspacemacs-configuration-layer-path '()
    dotspacemacs-install-packages 'used-only
    dotspacemacs-distribution 'spacemacs
