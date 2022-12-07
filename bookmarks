@@ -13,17 +13,12 @@
   (rear-context-string)
   (position . 0))
  ("TODOs - MLL"
-  (filename . "~/drive/mllabs/products/mll/notes/TODOs.md")
+  (filename . "~/drive/mllabs/clients/mll/notes/TODOs.md")
   (front-context-string)
   (rear-context-string)
   (position . 0))
  ("TODOs - VF"
   (filename . "~/drive/mllabs/clients/ggstr/vf/3-vrs-prod/notes/TODOs.md")
-  (front-context-string)
-  (rear-context-string)
-  (position . 0))
- ("TODOs - IC"
-  (filename . "~/drive/mllabs/clients/pm/projects/ic/notes/TODOs.md")
   (front-context-string)
   (rear-context-string)
   (position . 0))
