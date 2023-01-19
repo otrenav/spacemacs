@@ -22,6 +22,11 @@
   (front-context-string)
   (rear-context-string)
   (position . 0))
+ ("TODOs - GGSTR"
+  (filename . "~/drive/mllabs/clients/ggstr/ggstr/platform/notes/TODOs.md")
+  (front-context-string)
+  (rear-context-string)
+  (position . 0))
  ("TODOs - AYR"
   (filename . "~/drive/mllabs/clients/pm/projects/ayr/notes/TODOs.md")
   (front-context-string)
