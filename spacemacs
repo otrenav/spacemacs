@@ -254,6 +254,7 @@ package is loaded, you should place your code here."
   (setq-default spaceline-highlight-face-func
                 'spaceline-highlight-face-evil-state)
   (setq-default dotspacemacs-elpa-https nil)
+  (setq-default auto-highlight-symbol-mode t)
   (setq-default dotspacemacs-elpa-timeout 20)
   (setq-default global-auto-revert-non-file-buffers t)
   (setq-default auto-fill-function 'do-auto-fill)
