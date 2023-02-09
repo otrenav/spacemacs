@@ -253,11 +253,11 @@ package is loaded, you should place your code here."
                                          "^#.*#$" "\\.elc$" "^__pycache__$"))
   (setq-default spaceline-highlight-face-func
                 'spaceline-highlight-face-evil-state)
-  (setq-default dotspacemacs-elpa-https nil)
-  (setq-default auto-highlight-symbol-mode t)
-  (setq-default dotspacemacs-elpa-timeout 20)
   (setq-default global-auto-revert-non-file-buffers t)
+  (setq-default global-auto-highlight-symbol-mode t)
   (setq-default auto-fill-function 'do-auto-fill)
+  (setq-default dotspacemacs-elpa-timeout 20)
+  (setq-default dotspacemacs-elpa-https nil)
   (setq-default select-enable-clipboard t)
   (setq-default scroll-conservatively 101)
   (setq-default neo-window-fixed-size nil)
@@ -334,3 +334,22 @@ package is loaded, you should place your code here."
 
   (spacemacs/set-default-font dotspacemacs-default-font)
   )
+(defun dotspacemacs/emacs-custom-settings ()
+  "Emacs custom settings.
+This is an auto-generated function, do not modify its content directly, use
+Emacs customize menu instead.
+This function is called at the very end of Spacemacs initialization."
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(byte-compile-warnings '(mapcar))
+ '(evil-want-Y-yank-to-eol nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+)
