@@ -81,7 +81,6 @@
    ;; - iedit
    ;; - adaptive-wrap
    ;;
-   ;; dotspacemacs-additional-packages '(xclip cmake-mode sqlite3)
    dotspacemacs-additional-packages '(xclip cmake-mode)
    dotspacemacs-ask-for-lazy-installation t
    dotspacemacs-enable-lazy-installation nil
