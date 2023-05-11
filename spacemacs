@@ -11,9 +11,6 @@
      yaml
      git
      ess
-     (vue
-      :variables
-      vue-backed 'dumb)
      (neotree
       :variables
       neo-theme 'arrow
@@ -45,6 +42,9 @@
       typescript-fmt-on-save t
       typescript-indent-level 2
       typescript-fmt-tool 'typescript-formatter)
+     (sql
+      :variables
+      sql-capitalize-keywords nil)
      (spell-checking  ;; Prefixes: s
       :variables
       enable-flyspell-auto-completion t
@@ -69,6 +69,7 @@
      own-helm
      own-yaml
      own-html
+     own-sql
      own-git
      own-ess
      )
@@ -80,6 +81,7 @@
    ;; - iedit
    ;; - adaptive-wrap
    ;;
+   ;; dotspacemacs-additional-packages '(xclip cmake-mode sqlite3)
    dotspacemacs-additional-packages '(xclip cmake-mode)
    dotspacemacs-ask-for-lazy-installation t
    dotspacemacs-enable-lazy-installation nil
@@ -334,23 +336,24 @@ package is loaded, you should place your code here."
 
   (spacemacs/set-default-font dotspacemacs-default-font)
   )
+
 (defun dotspacemacs/emacs-custom-settings ()
   "Emacs custom settings.
 This is an auto-generated function, do not modify its content directly, use
 Emacs customize menu instead.
 This function is called at the very end of Spacemacs initialization."
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(byte-compile-warnings '(mapcar))
- '(evil-want-Y-yank-to-eol nil)
-)
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-)
+  (custom-set-variables
+   ;; custom-set-variables was added by Custom.
+   ;; If you edit it by hand, you could mess it up, so be careful.
+   ;; Your init file should contain only one such instance.
+   ;; If there is more than one, they won't work right.
+   '(byte-compile-warnings '(mapcar))
+   '(evil-want-Y-yank-to-eol nil)
+   )
+  (custom-set-faces
+   ;; custom-set-faces was added by Custom.
+   ;; If you edit it by hand, you could mess it up, so be careful.
+   ;; Your init file should contain only one such instance.
+   ;; If there is more than one, they won't work right.
+   )
+  )
