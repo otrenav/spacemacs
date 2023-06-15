@@ -22,6 +22,10 @@
       web-mode-code-indent-offset 2
       web-mode-attr-indent-offset 2
       web-mode-markup-indent-offset 2)
+     (json
+      :variables
+      json-fmt-on-save t
+      json-fmt-tool 'prettier)
      (javascript
       :variables
       js-indent-level 2
@@ -221,6 +225,9 @@ any user code in there besides modifying the variable values."
    dotspacemacs-helm-resize nil
    dotspacemacs-elpa-timeout 5
    dotspacemacs-elpa-https t
+   json-reformat:indent-width 2
+   js2-basic-offset 2
+   js-indent-level 2
    )
   )
 
