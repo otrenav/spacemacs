@@ -291,7 +291,7 @@ package is loaded, you should place your code here."
   (delete-selection-mode t)
   (transient-mark-mode t)
   (blink-cursor-mode t)
-  (global-linum-mode 0)
+  ;; (global-linum-mode 0)
   (scroll-bar-mode -1)
   (tool-bar-mode -1)
 
