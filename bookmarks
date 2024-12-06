@@ -12,24 +12,39 @@
  (front-context-string)
  (rear-context-string)
  (position . 0))
-("Notes - MLL"
+("MLL"
  (filename . "~/drive/mllabs/notes.md")
  (front-context-string)
  (rear-context-string)
  (position . 0)
  (last-modified 26403 56822 491667 625000))
-("Notes - VF"
+("VF"
  (filename . "~/drive/mllabs/partners/ggstr/vf/3-vrs-prod/notes.md")
  (front-context-string)
  (rear-context-string)
  (position . 0))
-("Notes - HS"
+("HS"
  (filename . "~/drive/mllabs/partners/ggstr/orth/hs/notes.md")
  (front-context-string)
  (rear-context-string)
  (position . 0))
-("Notes - ALPHA"
+("ALPHA"
  (filename . "~/drive/mllabs/partners/ggstr/alpha/notes.md")
+ (front-context-string)
+ (rear-context-string)
+ (position . 0))
+("OrgDo"
+ (filename . "~/drive/mllabs/products/orgdo/notes.md")
+ (front-context-string)
+ (rear-context-string)
+ (position . 0))
+("Timecors"
+ (filename . "~/drive/mllabs/products/timecors/notes.md")
+ (front-context-string)
+ (rear-context-string)
+ (position . 0))
+("CVEST"
+ (filename . "~/drive/mllabs/products/cvest/notes.md")
  (front-context-string)
  (rear-context-string)
  (position . 0))
