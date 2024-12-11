@@ -12,12 +12,16 @@
  (front-context-string)
  (rear-context-string)
  (position . 0))
+("Personal"
+ (filename . "~/drive/personal/notes.md")
+ (front-context-string)
+ (rear-context-string)
+ (position . 0))
 ("MLL"
  (filename . "~/drive/mllabs/notes.md")
  (front-context-string)
  (rear-context-string)
- (position . 0)
- (last-modified 26403 56822 491667 625000))
+ (position . 0))
 ("VF"
  (filename . "~/drive/mllabs/partners/ggstr/vf/3-vrs-prod/notes.md")
  (front-context-string)
@@ -33,8 +37,8 @@
  (front-context-string)
  (rear-context-string)
  (position . 0))
-("OrgDo"
- (filename . "~/drive/mllabs/products/orgdo/notes.md")
+("CVEST"
+ (filename . "~/drive/mllabs/products/cvest/notes.md")
  (front-context-string)
  (rear-context-string)
  (position . 0))
@@ -43,8 +47,8 @@
  (front-context-string)
  (rear-context-string)
  (position . 0))
-("CVEST"
- (filename . "~/drive/mllabs/products/cvest/notes.md")
+("OrgDo"
+ (filename . "~/drive/mllabs/products/orgdo/notes.md")
  (front-context-string)
  (rear-context-string)
  (position . 0))
