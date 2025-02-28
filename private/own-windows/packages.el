@@ -21,5 +21,5 @@
 
 (with-eval-after-load 'key-seq
   (key-seq-define-global ";w" 'delete-window)
-  (key-seq-define-global ";k" 'kill-this-buffer)
+  (key-seq-define-global ";k" 'kill-current-buffer)
   (key-seq-define-global "bb" 'mode-line-other-buffer))

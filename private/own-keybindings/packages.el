@@ -28,4 +28,4 @@
   (mapc 'kill-buffer (buffer-list))
   (print "Killed all buffers."))
 
-(substitute-key-definition 'kill-buffer 'kill-this-buffer global-map)
+(substitute-key-definition 'kill-buffer 'kill-current-buffer global-map)
