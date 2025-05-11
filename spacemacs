@@ -321,6 +321,9 @@ package is loaded, you should place your code here."
   (global-unset-key "\M-r")
   (global-set-key (kbd "M-r")     'anzu-query-replace-at-cursor)
 
+  (global-unset-key "\M-c")
+  (global-set-key (kbd "M-c")     'avy-goto-char)
+
   (global-unset-key "\C-o")
   (global-set-key (kbd "C-o")     'other-window)
 
@@ -329,6 +332,7 @@ package is loaded, you should place your code here."
   (global-set-key (kbd "C-S-w")   'own/kill-all-buffers)
   (global-set-key (kbd "C-+")     'text-scale-increase)
   (global-set-key (kbd "C--")     'text-scale-decrease)
+  (global-set-key (kbd "C-x k")   'kill-current-buffer)
   (global-set-key (kbd "C-M-f")   'mark-defun)
 
   (global-set-key (kbd "M-/")     'helm-projectile-ag)
