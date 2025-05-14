@@ -12,48 +12,58 @@
  (front-context-string)
  (rear-context-string)
  (position . 0))
-("Personal"
+("personal"
  (filename . "~/drive/personal/notes.md")
  (front-context-string)
  (rear-context-string)
  (position . 0))
-("MLL"
- (filename . "~/drive/mllabs/notes.md")
+("mll"
+ (filename . "~/drive/mll/products/mllabs/notes.md")
  (front-context-string)
  (rear-context-string)
  (position . 0))
-("VF"
- (filename . "~/drive/mllabs/partners/ggstr/vrs/notes.md")
+("vf"
+ (filename . "~/drive/mll/partners/ggstr/vrs/notes.md")
  (front-context-string)
  (rear-context-string)
  (position . 0))
-("HS"
- (filename . "~/drive/mllabs/partners/hs/notes.md")
+("hs"
+ (filename . "~/drive/mll/partners/hs/notes.md")
  (front-context-string)
  (rear-context-string)
  (position . 0))
-("CB"
- (filename . "~/drive/mllabs/partners/cb/notes.md")
+("alpha"
+ (filename . "~/drive/mll/partners/ggstr/alpha/notes.md")
  (front-context-string)
  (rear-context-string)
  (position . 0))
-("ALPHA"
- (filename . "~/drive/mllabs/partners/ggstr/alpha/notes.md")
+("cb"
+ (filename . "~/drive/mll/partners/cb/notes.md")
  (front-context-string)
  (rear-context-string)
  (position . 0))
-("CVEST"
- (filename . "~/drive/mllabs/products/cvest/notes.md")
+("orgdo"
+ (filename . "~/drive/mll/products/orgdo/notes.md")
  (front-context-string)
  (rear-context-string)
  (position . 0))
-("Timecors"
- (filename . "~/drive/mllabs/products/timecors/notes.md")
+("cvest"
+ (filename . "~/drive/mll/products/cvest/notes.md")
  (front-context-string)
  (rear-context-string)
  (position . 0))
-("OrgDo"
- (filename . "~/drive/mllabs/products/orgdo/notes.md")
+("timecors"
+ (filename . "~/drive/mll/products/timecors/notes.md")
+ (front-context-string)
+ (rear-context-string)
+ (position . 0))
+("queuena"
+ (filename . "~/drive/mll/products/queuena/notes.md")
+ (front-context-string)
+ (rear-context-string)
+ (position . 0))
+("revws"
+ (filename . "~/drive/mll/products/revws/notes.md")
  (front-context-string)
  (rear-context-string)
  (position . 0))
