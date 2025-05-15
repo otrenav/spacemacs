@@ -65,7 +65,6 @@
      own-yaml
      own-html
      own-sql
-     own-git
      )
 
    dotspacemacs-additional-packages
@@ -75,6 +74,7 @@
      whitespace
      helm-swoop
      key-chord
+     magit
      xclip
      )
 
@@ -345,6 +345,12 @@ package is loaded, you should place your code here."
   (with-eval-after-load 'markdown-mode
     (define-key markdown-mode-map (kbd "M-p") 'own/editing/move-line-up)
     (define-key markdown-mode-map (kbd "M-n") 'own/editing/move-line-down))
+
+  (with-eval-after-load 'magit
+    (define-key magit-hunk-section-map (kbd "RET")
+                'magit-diff-visit-file-other-window)
+    (define-key magit-file-section-map (kbd "RET")
+                'magit-diff-visit-file-other-window))
 
   ;;
   ;; Hooks
