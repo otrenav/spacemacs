@@ -4,7 +4,6 @@
   (setq-default
    dotspacemacs-configuration-layers
    '(
-     ;; syntax-checking  ;; Prefixes: e, t
      emacs-lisp
      markdown
      helm
@@ -293,8 +292,6 @@ package is loaded, you should place your code here."
   ;; - insert-rectangle       C-x r t
   ;; - delete-rectangle       C-x r d
   ;; - add number lines       C-x r N
-  ;; - TODO: Expand region    M-m v
-  ;; - TODO: Contract region  M-m V
   ;;
 
   (global-unset-key "\C-o")
@@ -306,6 +303,12 @@ package is loaded, you should place your code here."
   (global-set-key (kbd "C-+")     'text-scale-increase)
   (global-set-key (kbd "C--")     'text-scale-decrease)
   (global-set-key (kbd "C-\\")    'comment-or-uncomment-region)
+
+  (global-set-key (kbd "M-r")     'er/expand-region)
+  (global-set-key (kbd "M-R")     'er/contract-region)
+
+  (global-set-key (kbd "C-L")     'recenter-top-bottom)
+  (global-set-key (kbd "C-M-L")   'move-to-window-line-top-bottom)
 
   (global-set-key (kbd "M-i")     'spacemacs/helm-swoop-region-or-symbol)
   (global-set-key (kbd "M-I")     'helm-swoop-back-to-last-point)
@@ -334,9 +337,14 @@ package is loaded, you should place your code here."
   (key-chord-define-global ";w"   'delete-window)
   (key-chord-define-global ";c"   'avy-goto-char)
 
-  (with-eval-after-load 'python-mode
-    ;; TODO: Still not working. How?
-    (define-key python-mode-map (kbd "C-j") 'own/editing/join-lines))
+  (with-eval-after-load 'anaconda-mode
+    (define-key anaconda-mode-map (kbd "M-r") nil))
+
+  (with-eval-after-load 'python
+    (define-key python-mode-map (kbd "M-r") 'er/expand-region)
+    (define-key python-mode-map (kbd "M-R") 'er/contract-region)
+    (define-key python-mode-map (kbd "C-j") 'own/editing/join-lines)
+    )
 
   (with-eval-after-load 'dired
     (define-key dired-mode-map (kbd "C-o") 'other-window)
