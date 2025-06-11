@@ -273,6 +273,7 @@ package is loaded, you should place your code here."
   (setq-default css-indent-offset 2)
 
   (set-keyboard-coding-system 'utf-8)
+  (normal-erase-is-backspace-mode 1)
   (prefer-coding-system 'utf-8)
   (delete-selection-mode t)
   (transient-mark-mode t)
