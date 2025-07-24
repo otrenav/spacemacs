@@ -532,15 +532,15 @@ http://ergoemacs.org/emacs/emacs_dired_open_file_in_ext_apps.html"
   ;; To find out the face under the cursor: C-u C-x =
   ;; which is `what-cursor-position` with a prefix
   ;;
-  (custom-theme-set-faces 'monokai
-                          '(markdown-bold-face ((t (:foreground "#AF87FF"))))
-                          '(markdown-italic-face ((t (:foreground "#e6db74"))))
-                          `(markdown-header-face-1 ((t (:foreground "#5FD7FF" :height ,monokai-height-plus-4 :inherit markdown-header-face))))
-                          `(markdown-header-face-2 ((t (:foreground "#87D700" :height ,monokai-height-plus-3 :inherit markdown-header-face))))
-                          `(markdown-header-face-3 ((t (:foreground "#FF8C00" :height ,monokai-height-plus-2 :inherit markdown-header-face))))
-                          `(markdown-header-face-4 ((t (:foreground "#AF87FF" :height ,monokai-height-plus-1 :inherit markdown-header-face))))
-                          '(web-mode-html-tag-bracket-face ((t (:foreground "#888888"))))
-                          )
+  ;; (custom-theme-set-faces 'monokai
+  ;;                         '(markdown-bold-face ((t (:foreground "#AF87FF"))))
+  ;;                         '(markdown-italic-face ((t (:foreground "#e6db74"))))
+  ;;                         `(markdown-header-face-1 ((t (:foreground "#5FD7FF" :height ,monokai-height-plus-4 :inherit markdown-header-face))))
+  ;;                         `(markdown-header-face-2 ((t (:foreground "#87D700" :height ,monokai-height-plus-3 :inherit markdown-header-face))))
+  ;;                         `(markdown-header-face-3 ((t (:foreground "#FF8C00" :height ,monokai-height-plus-2 :inherit markdown-header-face))))
+  ;;                         `(markdown-header-face-4 ((t (:foreground "#AF87FF" :height ,monokai-height-plus-1 :inherit markdown-header-face))))
+  ;;                         '(web-mode-html-tag-bracket-face ((t (:foreground "#888888"))))
+  ;;                         )
   )
 
 (defun dotspacemacs/emacs-custom-settings ()
