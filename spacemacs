@@ -153,7 +153,7 @@ any user code in there besides modifying the variable values."
 
   ;; Others
   (setq-default
-   dotspacemacs-themes '(monokai)
+   dotspacemacs-themes '(spacemacs-light monokai)
    dotspacemacs-startup-lists '((recents . 10) (bookmarks . 10))
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
    dotspacemacs-colorize-cursor-according-to-state t
@@ -220,6 +220,8 @@ configuration executes. This function is mostly useful for
 variables that need to be set before packages are loaded. If you
 are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+  (custom-set-variables '(spacemacs-theme-custom-colors
+                          '((bg1 . "#FFFFFF"))))
   )
 
 (defun dotspacemacs/user-config ()
@@ -552,36 +554,36 @@ This function is called at the very end of Spacemacs initialization."
    ;; Your init file should contain only one such instance.
    ;; If there is more than one, they won't work right.
    '(byte-compile-warnings '(mapcar))
+   '(custom-safe-themes
+     '("9af2b1c0728d278281d87dc91ead7f5d9f2287b1ed66ec8941e97ab7a6ab73c0" default))
    '(evil-want-Y-yank-to-eol nil)
    '(package-selected-packages
-     '(ace-jump-helm-line ace-link aggressive-indent all-the-icons
-                          auto-compile auto-highlight-symbol
-                          auto-yasnippet bind-map blacken browse-at-remote
-                          centered-cursor-mode cmake-mode code-cells code-review
-                          column-enforce-mode company-anaconda company-quickhelp
-                          company-statistics company-web cython-mode devdocs
-                          diff-hl diminish dired-quick-sort disable-mouse
-                          dotenv-mode drag-stuff dumb-jump eat edit-indirect
-                          elisp-def elisp-demos elisp-slime-nav emmet-mode emr
-                          esh-help eshell-prompt-extras eshell-z ess-R-data-view
-                          evil-anzu evil-cleverparens evil-escape
-                          evil-evilified-state evil-goggles evil-iedit-state
-                          evil-indent-plus evil-lion evil-surround
-                          evil-textobj-line evil-unimpaired evil-visual-mark-mode
-                          evil-visualstar expand-region eyebrowse
-                          flyspell-correct-helm flyspell-popup gh-md git-link
-                          git-messenger git-modes git-timemachine
+     '(ace-jump-helm-line ace-link aggressive-indent all-the-icons auto-compile
+                          auto-highlight-symbol auto-yasnippet bind-map blacken
+                          browse-at-remote centered-cursor-mode cmake-mode
+                          code-cells code-review column-enforce-mode
+                          company-anaconda company-quickhelp company-statistics
+                          company-web cython-mode devdocs diff-hl diminish
+                          dired-quick-sort disable-mouse dotenv-mode drag-stuff
+                          dumb-jump eat edit-indirect elisp-def elisp-demos
+                          elisp-slime-nav emmet-mode emr esh-help
+                          eshell-prompt-extras eshell-z ess-R-data-view evil-anzu
+                          evil-cleverparens evil-escape evil-evilified-state
+                          evil-goggles evil-iedit-state evil-indent-plus evil-lion
+                          evil-surround evil-textobj-line evil-unimpaired
+                          evil-visual-mark-mode evil-visualstar expand-region
+                          eyebrowse flyspell-correct-helm flyspell-popup gh-md
+                          git-link git-messenger git-modes git-timemachine
                           gitignore-templates helm-ag helm-c-yasnippet helm-comint
                           helm-company helm-css-scss helm-descbinds helm-git-grep
-                          helm-ls-git helm-make helm-mode-manager
-                          helm-projectile helm-purpose helm-pydoc helm-swoop
-                          helm-xref hide-comnt hl-todo holy-mode hybrid-mode
-                          impatient-mode inspector js-doc js2-refactor json-mode
-                          json-navigator json-reformat key-seq link-hint
-                          live-py-mode livid-mode lorem-ipsum macrostep
-                          markdown-toc monokai-theme multi-line multi-term
-                          multi-vterm nameless neotree nerd-icons nodejs-repl
-                          npm-mode overseer paradox
+                          helm-ls-git helm-make helm-mode-manager helm-projectile
+                          helm-purpose helm-pydoc helm-swoop helm-xref hide-comnt
+                          hl-todo holy-mode hybrid-mode impatient-mode inspector
+                          js-doc js2-refactor json-mode json-navigator
+                          json-reformat key-seq link-hint live-py-mode livid-mode
+                          lorem-ipsum macrostep markdown-toc monokai-theme
+                          multi-line multi-term multi-vterm nameless neotree
+                          nerd-icons nodejs-repl npm-mode overseer paradox
                           password-generator persp-mode pip-requirements pipenv
                           pippel poetry popwin posframe prettier-js pug-mode
                           py-isort pydoc pyenv-mode pylookup pytest quickrun
@@ -590,10 +592,10 @@ This function is called at the very end of Spacemacs initialization."
                           spacemacs-purpose-popwin spacemacs-whitespace-cleanup
                           sphinx-doc sql-indent string-edit-at-point
                           string-inflection symbol-overlay symon tabbar tagedit
-                          term-cursor terminal-here typescript-mode
-                          undo-fu undo-fu-session vundo web-beautify web-mode
-                          wgrep winum writeroom-mode ws-butler xclip
-                          yaml-mode yapfify yasnippet-snippets)))
+                          term-cursor terminal-here typescript-mode undo-fu
+                          undo-fu-session vundo web-beautify web-mode wgrep winum
+                          writeroom-mode ws-butler xclip yaml-mode yapfify
+                          yasnippet-snippets)))
   (custom-set-faces
    ;; custom-set-faces was added by Custom.
    ;; If you edit it by hand, you could mess it up, so be careful.

@@ -12,8 +12,8 @@
  (front-context-string)
  (rear-context-string)
  (position . 0))
-("personal"
- (filename . "~/drive/personal/notes.md")
+("per"
+ (filename . "~/drive/per/notes.md")
  (front-context-string)
  (rear-context-string)
  (position . 0))
