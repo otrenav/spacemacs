@@ -153,7 +153,8 @@ any user code in there besides modifying the variable values."
 
   ;; Others
   (setq-default
-   dotspacemacs-themes '(spacemacs-light monokai)
+   dotspacemacs-themes '(spacemacs-light)
+   ;; dotspacemacs-themes '(spacemacs-light monokai)
    dotspacemacs-startup-lists '((recents . 10) (bookmarks . 10))
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
    dotspacemacs-colorize-cursor-according-to-state t
@@ -581,7 +582,7 @@ This function is called at the very end of Spacemacs initialization."
                           hl-todo holy-mode hybrid-mode impatient-mode inspector
                           js-doc js2-refactor json-mode json-navigator
                           json-reformat key-seq link-hint live-py-mode livid-mode
-                          lorem-ipsum macrostep markdown-toc monokai-theme
+                          lorem-ipsum macrostep markdown-toc
                           multi-line multi-term multi-vterm nameless neotree
                           nerd-icons nodejs-repl npm-mode overseer paradox
                           password-generator persp-mode pip-requirements pipenv
