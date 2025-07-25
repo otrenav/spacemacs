@@ -296,6 +296,11 @@ package is loaded, you should place your code here."
   ;; - delete-rectangle       C-x r d
   ;; - add number lines       C-x r N
   ;;
+  ;; `M-x describe-face`: used to find face underneath cursor
+  ;; `M-x list-faces-display`: show faces being used
+  ;; `load-file ENTER ENTER`: used to reload theme
+  ;;
+
 
   (global-unset-key "\C-o")
 
