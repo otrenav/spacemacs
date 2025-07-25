@@ -153,8 +153,7 @@ any user code in there besides modifying the variable values."
 
   ;; Others
   (setq-default
-   dotspacemacs-themes '(spacemacs-light)
-   ;; dotspacemacs-themes '(spacemacs-light monokai)
+   dotspacemacs-themes '(monokai)
    dotspacemacs-startup-lists '((recents . 10) (bookmarks . 10))
    dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
    dotspacemacs-colorize-cursor-according-to-state t
@@ -533,15 +532,15 @@ http://ergoemacs.org/emacs/emacs_dired_open_file_in_ext_apps.html"
   ;; To find out the face under the cursor: C-u C-x =
   ;; which is `what-cursor-position` with a prefix
   ;;
-  ;; (custom-theme-set-faces 'monokai
-  ;;                         '(markdown-bold-face ((t (:foreground "#AF87FF"))))
-  ;;                         '(markdown-italic-face ((t (:foreground "#e6db74"))))
-  ;;                         `(markdown-header-face-1 ((t (:foreground "#5FD7FF" :height ,monokai-height-plus-4 :inherit markdown-header-face))))
-  ;;                         `(markdown-header-face-2 ((t (:foreground "#87D700" :height ,monokai-height-plus-3 :inherit markdown-header-face))))
-  ;;                         `(markdown-header-face-3 ((t (:foreground "#FF8C00" :height ,monokai-height-plus-2 :inherit markdown-header-face))))
-  ;;                         `(markdown-header-face-4 ((t (:foreground "#AF87FF" :height ,monokai-height-plus-1 :inherit markdown-header-face))))
-  ;;                         '(web-mode-html-tag-bracket-face ((t (:foreground "#888888"))))
-  ;;                         )
+  (custom-theme-set-faces 'monokai
+                          '(markdown-bold-face ((t (:foreground "#AF87FF"))))
+                          '(markdown-italic-face ((t (:foreground "#e6db74"))))
+                          `(markdown-header-face-1 ((t (:foreground "#5FD7FF" :height ,monokai-height-plus-4 :inherit markdown-header-face))))
+                          `(markdown-header-face-2 ((t (:foreground "#87D700" :height ,monokai-height-plus-3 :inherit markdown-header-face))))
+                          `(markdown-header-face-3 ((t (:foreground "#FF8C00" :height ,monokai-height-plus-2 :inherit markdown-header-face))))
+                          `(markdown-header-face-4 ((t (:foreground "#AF87FF" :height ,monokai-height-plus-1 :inherit markdown-header-face))))
+                          '(web-mode-html-tag-bracket-face ((t (:foreground "#888888"))))
+                          )
   )
 
 (defun dotspacemacs/emacs-custom-settings ()
@@ -556,7 +555,8 @@ This function is called at the very end of Spacemacs initialization."
    ;; If there is more than one, they won't work right.
    '(byte-compile-warnings '(mapcar))
    '(custom-safe-themes
-     '("9af2b1c0728d278281d87dc91ead7f5d9f2287b1ed66ec8941e97ab7a6ab73c0" default))
+     '("5e39e95c703e17a743fb05a132d727aa1d69d9d2c9cde9353f5350e545c793d4"
+       "9af2b1c0728d278281d87dc91ead7f5d9f2287b1ed66ec8941e97ab7a6ab73c0" default))
    '(evil-want-Y-yank-to-eol nil)
    '(package-selected-packages
      '(ace-jump-helm-line ace-link aggressive-indent all-the-icons auto-compile
@@ -582,7 +582,7 @@ This function is called at the very end of Spacemacs initialization."
                           hl-todo holy-mode hybrid-mode impatient-mode inspector
                           js-doc js2-refactor json-mode json-navigator
                           json-reformat key-seq link-hint live-py-mode livid-mode
-                          lorem-ipsum macrostep markdown-toc
+                          lorem-ipsum macrostep markdown-toc modus-themes
                           multi-line multi-term multi-vterm nameless neotree
                           nerd-icons nodejs-repl npm-mode overseer paradox
                           password-generator persp-mode pip-requirements pipenv
@@ -596,7 +596,8 @@ This function is called at the very end of Spacemacs initialization."
                           term-cursor terminal-here typescript-mode undo-fu
                           undo-fu-session vundo web-beautify web-mode wgrep winum
                           writeroom-mode ws-butler xclip yaml-mode yapfify
-                          yasnippet-snippets)))
+                          yasnippet-snippets))
+   '(spacemacs-theme-custom-colors '((bg1 . "#FFFFFF"))))
   (custom-set-faces
    ;; custom-set-faces was added by Custom.
    ;; If you edit it by hand, you could mess it up, so be careful.
