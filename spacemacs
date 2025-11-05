@@ -28,7 +28,20 @@
      (javascript
       :variables
       js-indent-level 2
-      js2-basic-offset 2)
+      js2-basic-offset 2
+      javascript-backend 'tide
+      typescript-fmt-on-save t
+      typescript-linter 'eslint
+      typescript-fmt-tool 'prettier)
+     (typescript
+      :variables
+      js-indent-level 2
+      js2-basic-offset 2
+      typescript-fmt-on-save t
+      typescript-indent-level 2
+      javascript-backend 'tide
+      typescript-linter 'eslint
+      typescript-fmt-tool 'prettier)
      (version-control
       :variables
       version-control-global-margin t
@@ -38,11 +51,6 @@
       python-formatter 'black
       python-format-on-save t
       python-test-runner 'pytest)
-     (typescript
-      :variables
-      typescript-fmt-on-save t
-      typescript-indent-level 2
-      typescript-fmt-tool 'typescript-formatter)
      (sql
       :variables
       sql-capitalize-keywords nil)
@@ -69,10 +77,13 @@
    dotspacemacs-additional-packages
    '(
      auto-highlight-symbol
+     yasnippet-snippets
+     prettier-js
      cmake-mode
      whitespace
      helm-swoop
      key-chord
+     rjsx-mode
      magit
      xclip
      )
@@ -267,15 +278,18 @@ package is loaded, you should place your code here."
   (setq-default fill-column 80)
   (setq-default tab-width 4)
 
+  ;; (setq-default normal-erase-is-backspace-mode 1)
   (setq-default web-mode-markup-indent-offset 2)
   (setq-default web-mode-code-indent-offset 2)
   (setq-default web-mode-attr-indent-offset 2)
   (setq-default web-mode-css-indent-offset 2)
   (setq-default web-mode-script-padding 2)
+  (setq-default delete-selection-mode t)
+  (setq-default transient-mark-mode t)
   (setq-default css-indent-offset 2)
 
   (set-keyboard-coding-system 'utf-8)
-  (normal-erase-is-backspace-mode 1)
+  ;; (normal-erase-is-backspace-mode 1)
   (prefer-coding-system 'utf-8)
   (delete-selection-mode t)
   (transient-mark-mode t)
@@ -531,6 +545,38 @@ http://ergoemacs.org/emacs/emacs_dired_open_file_in_ext_apps.html"
 
   (spacemacs/toggle-automatic-symbol-highlight-on)
   (spacemacs/set-default-font dotspacemacs-default-font)
+
+  ;;
+  ;; JavaScript, TypeScript, React
+  ;;
+  (defun tide-setup-hook ()
+    (tide-setup)
+    (eldoc-mode)
+    (tide-hl-identifier-mode +1)
+    (setq web-mode-enable-auto-quoting nil)
+    (setq web-mode-markup-indent-offset 2)
+    (setq web-mode-code-indent-offset 2)
+    (setq web-mode-attr-indent-offset 2)
+    (setq web-mode-attr-value-indent-offset 2)
+    (setq lsp-eslint-server-command '("node" (concat (getenv "HOME") "/var/src/vscode-eslint/server/out/eslintServer.js") "--stdio"))
+    ;; (set (make-local-variable 'company-backends)
+    ;;      '((company-tide company-files :with company-yasnippet)
+    ;;        (company-dabbrev-code company-dabbrev)))
+    )
+  (add-hook 'before-save-hook 'tide-format-before-save)
+  (add-to-list 'auto-mode-alist '("\\.js.*$" . rjsx-mode))
+  (add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
+  (add-hook 'rjsx-mode-hook 'tide-setup-hook)
+
+  ;; web-mode extra config
+  ;; (add-hook 'web-mode-hook 'tide-setup-hook
+  ;;           (lambda () (pcase (file-name-extension buffer-file-name)
+  ;;                        ("tsx" ('tide-setup-hook))
+  ;;                        (_ (my-web-mode-hook)))))
+  (add-hook 'web-mode-hook 'company-mode)
+  (add-hook 'web-mode-hook 'prettier-js-mode)
+  (add-hook 'web-mode-hook #'turn-on-smartparens-mode t)
+  ;; (flycheck-add-mode 'typescript-tslint 'web-mode)
 
   ;;
   ;; Override theme faces
