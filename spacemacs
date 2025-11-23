@@ -84,6 +84,7 @@
      helm-swoop
      key-chord
      rjsx-mode
+     vue-mode
      magit
      xclip
      )
@@ -391,7 +392,10 @@ package is loaded, you should place your code here."
   (add-hook 'html-mode-hook       'own/editing/syntax-color-hex)
   (add-hook 'markdown-mode-hook   'own/editing/syntax-color-hex)
   (add-hook 'emacs-lisp-mode-hook 'own/editing/syntax-color-hex)
-
+  (add-hook 'mmm-mode-hook        'own/editing/syntax-color-hex)
+  (add-hook 'mmm-mode-hook
+            (lambda ()
+              (set-face-background 'mmm-default-submode-face nil)))
   ;;
   ;; Own functions
   ;;
