@@ -296,6 +296,7 @@ package is loaded, you should place your code here."
   (transient-mark-mode t)
   (blink-cursor-mode t)
   (scroll-bar-mode -1)
+  (auto-fill-mode -1)
   (tool-bar-mode -1)
 
   (require 'key-chord)
