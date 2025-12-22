@@ -158,21 +158,21 @@ This function is called at the very startup of Spacemacs
 initialization before layers configuration. You should not put
 any user code in there besides modifying the variable values."
   (setq-default
-   dotspacemacs-default-font '("Roboto Mono Medium" :size 22))
+   dotspacemacs-default-font '("Roboto Mono" :size 26))
   (cond ((string-equal (downcase system-name) "olap")
          (progn (setq-default dotspacemacs-default-font
-                              '("Roboto Mono Medium" :size 36)))))
+                              '("Roboto Mono" :size 36)))))
 
   ;; Others
   (setq-default
    dotspacemacs-themes '(monokai)
    dotspacemacs-startup-lists '((recents . 10) (bookmarks . 10))
-   dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
+   dotspacemacs-search-tools '("rg" "ag" "ack" "grep")
    dotspacemacs-colorize-cursor-according-to-state t
    dotspacemacs-major-mode-emacs-leader-key "C-M-m"
    dotspacemacs-show-transient-state-color-guide t
    dotspacemacs-enable-paste-transient-state nil
-   dotspacemacs-retain-visual-state-on-shift t
+   vim-style-retain-visual-state-on-shift t
    dotspacemacs-default-package-repository nil
    dotspacemacs-auto-save-file-location 'cache
    dotspacemacs-default-layout-name "Default"
@@ -188,9 +188,9 @@ any user code in there besides modifying the variable values."
    dotspacemacs-inactive-transparency 100
    dotspacemacs-major-mode-leader-key ","
    dotspacemacs-highlight-delimiters 'all
-   dotspacemacs-visual-line-move-text nil
+   vim-style-visual-line-move-text nil
    dotspacemacs-fullscreen-at-startup nil
-   dotspacemacs-ex-substitute-global nil
+   vim-style-ex-substitute-global nil
    dotspacemacs-maximized-at-startup nil
    dotspacemacs-distinguish-gui-tab nil
    dotspacemacs-auto-resume-layouts nil
@@ -199,8 +199,8 @@ any user code in there besides modifying the variable values."
    dotspacemacs-emacs-command-key "SPC"
    dotspacemacs-emacs-leader-key "M-m"
    dotspacemacs-loading-progress-bar t
-   dotspacemacs-helm-use-fuzzy 'always
-   dotspacemacs-helm-position 'bottom
+   helm-use-fuzzy 'always
+   helm-position 'bottom
    dotspacemacs-elpa-subdirectory nil
    dotspacemacs-persistent-server nil
    dotspacemacs-max-rollback-slots 5
@@ -211,12 +211,12 @@ any user code in there besides modifying the variable values."
    dotspacemacs-ex-command-key ":"
    dotspacemacs-check-for-update t
    dotspacemacs-smooth-scrolling t
-   dotspacemacs-helm-no-header nil
+   helm-no-header nil
    dotspacemacs-startup-banner nil
    dotspacemacs-large-file-size 1
-   dotspacemacs-remap-Y-to-y$ nil
+   vim-style-remap-Y-to-y$ nil
    dotspacemacs-line-numbers nil
-   dotspacemacs-helm-resize nil
+   helm-enable-auto-resize nil
    dotspacemacs-elpa-timeout 5
    dotspacemacs-elpa-https t
    json-reformat:indent-width 2
