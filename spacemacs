@@ -134,7 +134,6 @@
      helm-themes
      hl-anything
      smartparens
-     smartparens
      ace-window
      evil-tutor
      evil-args
@@ -285,8 +284,6 @@ package is loaded, you should place your code here."
   (setq-default web-mode-attr-indent-offset 2)
   (setq-default web-mode-css-indent-offset 2)
   (setq-default web-mode-script-padding 2)
-  (setq-default delete-selection-mode t)
-  (setq-default transient-mark-mode t)
   (setq-default css-indent-offset 2)
 
   (set-keyboard-coding-system 'utf-8)
@@ -377,6 +374,11 @@ package is loaded, you should place your code here."
   (with-eval-after-load 'markdown-mode
     (define-key markdown-mode-map (kbd "M-p") 'own/editing/move-line-up)
     (define-key markdown-mode-map (kbd "M-n") 'own/editing/move-line-down))
+
+  (add-hook 'markdown-mode-hook
+            (lambda ()
+              (auto-fill-mode -1)
+              (visual-line-mode 1)))
 
   (with-eval-after-load 'magit
     (define-key magit-hunk-section-map (kbd "RET")
